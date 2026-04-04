@@ -16,6 +16,14 @@ if ! command -v pandoc &> /dev/null; then
   exit 1
 fi
 
+# Detect highlight flag (pandoc 3.4+ uses --syntax-highlighting=none, older uses --no-highlight)
+PANDOC_VERSION="$(pandoc --version | head -1 | grep -oE '[0-9]+' | head -1)"
+if [ "$PANDOC_VERSION" -ge 3 ] 2>/dev/null && pandoc --syntax-highlighting=none /dev/null -t html5 &>/dev/null; then
+  HIGHLIGHT_FLAG="--syntax-highlighting=none"
+else
+  HIGHLIGHT_FLAG="--no-highlight"
+fi
+
 # inject_template TITLE EYEBROW META CONTENT_FILE OUTPUT_FILE
 inject_template() {
   local title="$1"
@@ -60,7 +68,7 @@ convert_md() {
   pandoc \
     --from=gfm \
     --to=html5 \
-    --syntax-highlighting=none \
+    $HIGHLIGHT_FLAG \
     "$source_md" > "$tmp_html"
 
   # If there are appendices alongside the dossier, concatenate them
@@ -75,7 +83,7 @@ convert_md() {
       pandoc \
         --from=gfm \
         --to=html5 \
-        --syntax-highlighting=none \
+        $HIGHLIGHT_FLAG \
         "$appendix" >> "$tmp_html"
     done
   fi
