@@ -1,0 +1,46 @@
+/*
+ * Moonshot Dossiers — Design Tokens (Dark Moon Variant)
+ * Derived from: T(h)reehouse +EC corporate-design/assets/tokens.css
+ * Variant: Dark / lunar inversion
+ * Licence: MIT
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files, to deal
+ * in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, subject to the following condition:
+ *
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+:root {
+  /* Primary palette — lunar inversion */
+  --ink: #e4e0d8;
+  --sea: #6aafcc;
+  --signal: #d4584b;
+
+  /* Secondary palette */
+  --stone: #8a8a8a;
+  --parchment: #0e1014;
+  --grid: #1f2228;
+  --warm-white: #161920;
+
+  /* Typography */
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-serif: 'Crimson Pro', Georgia, serif;
+
+  /* Layout */
+  --measure: 38rem;
+  --gutter: 1.5rem;
+
+  /* Accessibility */
+  --focus-ring: 2px solid var(--sea);
+  --focus-offset: 2px;
+  --min-target: 2.75rem;
+  --min-target-aa: 1.5rem;
+}
