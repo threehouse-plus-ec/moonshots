@@ -22,19 +22,19 @@
 | CL-APOLLO-001 | CL-2026-003 | Programme objective achievement | DRAFT |
 | CL-APOLLO-002 | CL-2026-004 | Budget adherence | DRAFT |
 | CL-APOLLO-003 | CL-2026-005 | Six successful landings | DRAFT |
-| CL-APOLLO-004 | CL-2026-006 | All-up testing strategy | PENDING |
-| CL-APOLLO-005 | CL-2026-007 | Five-box management structure | PENDING |
-| CL-APOLLO-006 | CL-2026-008 | Lunar Orbit Rendezvous optimality | PENDING |
-| CL-APOLLO-007 | CL-2026-009 | Block I → Block II redesign driver | PENDING |
+| CL-APOLLO-004 | CL-2026-006 | All-up testing strategy | DRAFT |
+| CL-APOLLO-005 | CL-2026-007 | Five-box management structure | DRAFT |
+| CL-APOLLO-006 | CL-2026-008 | Lunar Orbit Rendezvous optimality | DRAFT |
+| CL-APOLLO-007 | CL-2026-009 | Block I → Block II redesign driver | DRAFT |
 | CL-APOLLO-008 | CL-2026-010 | Apollo 1 fire causal factors | PENDING |
 | CL-APOLLO-009 | CL-2026-011 | Apollo 13 cascading failure | PENDING |
 | CL-APOLLO-010 | CL-2026-012 | Post-failure organisational learning | PENDING |
 | CL-APOLLO-011 | CL-2026-013 | Management innovation legacy | PENDING |
 | CL-APOLLO-012 | CL-2026-014 | Cancellation drivers | PENDING |
 | CL-APOLLO-013 | CL-2026-015 | Lunar sample scientific value | PENDING |
-| CL-APOLLO-014 | CL-2026-016 | Apollo Guidance Computer pioneering role | PENDING |
+| CL-APOLLO-014 | CL-2026-016 | Apollo Guidance Computer pioneering role | DRAFT |
 | CL-APOLLO-015 | CL-2026-017 | Psychological safety culture | PENDING |
-| CL-APOLLO-016 | CL-2026-018 | Incremental capability build-up (Mercury → Gemini → Apollo) | PENDING |
+| CL-APOLLO-016 | CL-2026-018 | Incremental capability build-up (Mercury → Gemini → Apollo) | DRAFT |
 
 ## Artemis Programme
 
