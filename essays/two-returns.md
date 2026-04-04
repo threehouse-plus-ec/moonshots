@@ -3,9 +3,9 @@
 **Subtitle:** Error-Correction Architectures in Lunar Exploration  
 **Document:** `essays/two-returns.md`  
 **Epistemic Layer:** Sails  
-**Version:** v1.0.0-draft  
+**Version:** v1.0.0  
 **Date:** 2026-04-04  
-**Status:** DRAFT — awaiting Council-3 review (Step 3c)  
+**Status:** FINAL — Council-3 review applied (Step 3d)  
 
 ---
 
@@ -38,7 +38,7 @@ The analytical axis is **integration vs. exploration** — when does tight coupl
 
 ## I. Five Systems, One Question
 
-Between 1958 and 2026, five distinct organisations attempted to land machines or people on the Moon. Each succeeded at least once. Each failed at least once. What separates them is not ambition or physics — the Moon is the same distance from Moscow, Houston, Beijing, Bengaluru, and Boca Chica — but the architecture of their error-correction systems. How did each programme detect that something was wrong, and what did it do next?
+Between 1958 and 2026, five distinct organisations attempted to land machines or people on the Moon. Each succeeded at least once. Four of the five experienced outright mission failures; the fifth — China's Chang'e programme — holds a perfect 6-for-6 record as of this writing, though its most ambitious phases (crewed landing, ILRS construction) remain ahead. What separates these programmes is not ambition or physics — the Moon is the same distance from Moscow, Houston, Beijing, Bengaluru, and Boca Chica — but the architecture of their error-correction systems. How did each programme detect that something was wrong, and what did it do next?
 
 This is not a rankings exercise. The Breakwater dossiers (Apollo, Artemis, Luna, Chang'e, Chandrayaan) provide the coastline — measured claims, classified against evidence. This essay provides one possible key: the observation that the five programmes represent five distinct answers to the same fundamental problem of engineering under uncertainty.
 
@@ -106,7 +106,7 @@ The parallel with Apollo is instructive. NASA's post-Apollo 1 response (CL-APOLL
 
 ## VI. Artemis: The Federated Experiment
 
-Artemis is the most architecturally novel — and the most uncertain — of the five programmes. Its error-correction architecture is still forming, which is why the Artemis dossier has the lowest COMPATIBLE rate (33%) of any programme assessed.
+Artemis is the most architecturally novel — and the most uncertain — of the five programmes. Its error-correction architecture is still forming. The Artemis dossier classified only 2 of 6 entries as COMPATIBLE — but this figure reflects the epistemic difficulty of assessing a live programme with immature historiography and unresolved future-facing claims, not a direct measurement of architectural quality. A completed Artemis programme would likely produce a very different distribution. What the current dossier *does* reveal is the programme's characteristic uncertainty signature.
 
 The programme's distinctive feature is its federated structure: NASA provides SLS and Orion; SpaceX provides Starship HLS; Blue Origin provides Blue Moon; Axiom provides spacesuits; ESA provides the service module; commercial providers deliver robotic payloads via CLPS. No single entity controls the full stack. This is neither Apollo's hierarchy nor the Soviet competitive bureau model — it is something new, a distributed architecture with commercial integration.
 
@@ -122,16 +122,28 @@ The open question is whether Artemis's federated model is a feature or a failure
 
 ## VII. The Axis
 
-The five programmes can be placed on the integration-exploration axis:
+To place the five programmes on the integration-exploration axis, we need explicit criteria. The axis is operationalised along five dimensions:
+
+| Dimension | More Integrated ← | → More Exploratory |
+|-----------|--------------------|--------------------|
+| **Central authority** | Single programme office with directive power | Multiple autonomous actors |
+| **Configuration control** | Formal change boards, interface documents, gates | Informal or absent |
+| **Architecture conservatism** | Fly proven systems; extend incrementally | Fly unproven architectures |
+| **Mission-loss tolerance** | Low — every failure triggers systemic review | High — failures are expected data points |
+| **External dependency** | Vertically integrated; few external partners | Heavily dependent on external actors |
+
+Scored qualitatively against these criteria:
 
 ```
 ← MORE INTEGRATED                                    MORE EXPLORATORY →
 
-   Apollo        Chang'e        Artemis         Chandrayaan       Luna
-   (hierarchy)   (phased gates) (federated)     (adaptive iter.)  (competitive)
+   Apollo        Chang'e        Chandrayaan       Luna
+   (hierarchy)   (phased gates) (adaptive iter.)  (competitive)
 ```
 
-This ordering reveals a pattern: the most integrated programmes (Apollo, Chang'e) have the highest mission success rates but the slowest pace or highest cost. The most exploratory (Luna) generated the most firsts but could not scale to crewed complexity. The adaptive programmes (Chandrayaan, Artemis) sit in between — they trade some integration control for learning speed.
+Artemis does not sit cleanly on this axis. Its federated structure — high external dependency, moderate configuration control, novel architecture — places it toward the exploratory end on some dimensions but toward integration on others (formal NASA oversight, design reviews, contract gates). It may be better understood as occupying an orthogonal axis: *centralised vs. distributed authority*, which the one-dimensional integration-exploration frame cannot fully capture. The ordering above therefore omits Artemis from the line and treats it as a distinct case.
+
+With that caveat, the four-programme ordering reveals a pattern: the most integrated programmes (Apollo, Chang'e) have the highest mission success rates but the slowest pace or highest cost. The most exploratory (Luna) generated the most firsts but could not scale to crewed complexity. Chandrayaan sits between — trading some integration control for learning speed.
 
 But the axis is not static. Programmes move along it in response to failure:
 - Apollo moved *toward* integration after Apollo 1 (independent verification, materials control).
@@ -159,7 +171,7 @@ These are not just engineering choices. They are epistemic positions — each pr
 
 Apollo's answer was: build a system that ensures you *do* know. Mueller's five-box structure was a knowledge machine — it assumed that with enough process, enough reviews, enough configuration control, the unknown unknowns could be converted to known unknowns and then resolved. This worked spectacularly for a programme of bounded scope (land and return) and bounded duration (before decade's end). It could not adapt when the scope changed (sustained presence) or the budget disappeared.
 
-ChatGPT's swarm-experiment contribution is relevant here. ChatGPT was the only agent that refused to populate fields it could not verify, producing ~200 `[VERIFY]` markers instead. This is the Guardian principle: the system that knows what it doesn't know is safer than the system that doesn't know what it doesn't know. Apollo's post-fire reforms moved toward this principle. Artemis's schedule record suggests the programme has not yet internalised it — the optimistic baseline schedules that required revision are the programmatic equivalent of filling in a field you cannot verify.
+A brief methodological aside illuminates this point. The dossiers underlying this essay were partly compiled through a multi-agent data-collection experiment (documented in `meta/SWARM-ASSESSMENT.md`), in which six AI agents were given identical task cards. One agent — ChatGPT — refused to populate fields it could not verify, producing ~200 `[VERIFY]` markers instead of plausible-sounding data. By volume metrics it was the weakest output; by epistemic-honesty metrics it was the strongest. This maps directly onto the aerospace pattern: the system that knows what it doesn't know is safer than the system that doesn't know what it doesn't know. Apollo's post-fire reforms moved toward this principle. Artemis's schedule record suggests the programme has not yet internalised it — the optimistic baseline schedules that required revision are the programmatic equivalent of filling in a field you cannot verify.
 
 ---
 
