@@ -55,33 +55,33 @@
 
 | Local Alias | Global ID | Short Title | Status |
 |-------------|-----------|-------------|--------|
-| CL-LUNA-001 | CL-2026-025 | Design bureau fragmentation vs. reliability | PENDING |
-| CL-LUNA-002 | CL-2026-026 | Exploration firsts | PENDING |
-| CL-LUNA-003 | CL-2026-027 | Political opacity and error correction | PENDING |
-| CL-LUNA-004 | CL-2026-028 | Luna 25 systemic continuity | PENDING |
-| CL-LUNA-005 | CL-2026-029 | N1 failure and crewed programme cancellation | PENDING |
+| CL-LUNA-001 | CL-2026-025 | Design bureau fragmentation vs. reliability | DRAFT |
+| CL-LUNA-002 | CL-2026-026 | Exploration firsts | DRAFT |
+| CL-LUNA-003 | CL-2026-027 | Political opacity and error correction | DRAFT |
+| CL-LUNA-004 | CL-2026-028 | Luna 25 systemic continuity | DRAFT |
+| CL-LUNA-005 | CL-2026-029 | N1 failure and crewed programme cancellation | DRAFT |
 
 ## Chang'e Programme (Comparative Dossier)
 
 | Local Alias | Global ID | Short Title | Type | Status |
 |-------------|-----------|-------------|------|--------|
-| CL-CHANGE-001 | CL-2026-030 | Four-phase incremental architecture | H | PENDING |
-| CL-CHANGE-002 | CL-2026-031 | First far-side soft landing | H | PENDING |
-| CL-CHANGE-003 | CL-2026-032 | First far-side sample return | H | PENDING |
-| CL-CHANGE-004 | CL-2026-033 | Closed-loop inter-mission learning | H | PENDING |
-| CL-CHANGE-005 | CL-2026-034 | ILRS as Artemis alternative | P | PENDING |
-| CL-CHANGE-006 | CL-2026-035 | Crewed landing by 2030 | P | PENDING |
+| CL-CHANGE-001 | CL-2026-030 | Four-phase incremental architecture | H | DRAFT |
+| CL-CHANGE-002 | CL-2026-031 | First far-side soft landing | H | DRAFT |
+| CL-CHANGE-003 | CL-2026-032 | First far-side sample return | H | DRAFT |
+| CL-CHANGE-004 | CL-2026-033 | Closed-loop inter-mission learning | H | DRAFT |
+| CL-CHANGE-005 | CL-2026-034 | ILRS as Artemis alternative | P | DRAFT |
+| CL-CHANGE-006 | CL-2026-035 | Crewed landing by 2030 | P | DRAFT |
 
 ## Chandrayaan Programme (Comparative Dossier)
 
 | Local Alias | Global ID | Short Title | Type | Status |
 |-------------|-----------|-------------|------|--------|
-| CL-CHANDRA-001 | CL-2026-036 | Chandrayaan-2 failure cause | H | PENDING |
-| CL-CHANDRA-002 | CL-2026-037 | Post-failure team retention strategy | H | PENDING |
-| CL-CHANDRA-003 | CL-2026-038 | Failure-based design philosophy | H | PENDING |
-| CL-CHANDRA-004 | CL-2026-039 | First south polar landing | H | PENDING |
-| CL-CHANDRA-005 | CL-2026-040 | Cost-constrained lunar capability | H | PENDING |
+| CL-CHANDRA-001 | CL-2026-036 | Chandrayaan-2 failure cause | H | DRAFT |
+| CL-CHANDRA-002 | CL-2026-037 | Post-failure team retention strategy | H | DRAFT |
+| CL-CHANDRA-003 | CL-2026-038 | Failure-based design philosophy | H | DRAFT |
+| CL-CHANDRA-004 | CL-2026-039 | First south polar landing | H | DRAFT |
+| CL-CHANDRA-005 | CL-2026-040 | Cost-constrained lunar capability | H | DRAFT |
 
 ---
 
-*Total entries: 38 (16 Apollo + 6 Artemis + 5 Luna + 6 Chang'e + 5 Chandrayaan)*
+*Total entries: 38 (16 Apollo + 6 Artemis + 5 Luna + 6 Chang'e + 5 Chandrayaan) — all DRAFT*
