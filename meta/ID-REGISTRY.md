@@ -40,12 +40,12 @@
 
 | Local Alias | Global ID | Short Title | Type | Status |
 |-------------|-----------|-------------|------|--------|
-| CL-ARTEMIS-001 | CL-2026-019 | Sustained presence infrastructure | P | PENDING |
-| CL-ARTEMIS-002 | CL-2026-020 | SLS performance class | H | PENDING |
-| CL-ARTEMIS-003 | CL-2026-021 | Artemis I mission completion | H | PENDING |
-| CL-ARTEMIS-004 | CL-2026-022 | Schedule adherence | P | PENDING |
-| CL-ARTEMIS-005 | CL-2026-023 | Starship HLS architecture shift | P | PENDING |
-| CL-ARTEMIS-006 | CL-2026-024 | Gateway architectural necessity | P | PENDING |
+| CL-ARTEMIS-001 | CL-2026-019 | Sustained presence infrastructure | P | DRAFT |
+| CL-ARTEMIS-002 | CL-2026-020 | SLS performance class | H | DRAFT |
+| CL-ARTEMIS-003 | CL-2026-021 | Artemis I mission completion | H | DRAFT |
+| CL-ARTEMIS-004 | CL-2026-022 | Schedule adherence | P | DRAFT |
+| CL-ARTEMIS-005 | CL-2026-023 | Starship HLS architecture shift | P | DRAFT |
+| CL-ARTEMIS-006 | CL-2026-024 | Gateway architectural necessity | P | DRAFT |
 
 *Artemis entries provisional; scope finalised in Phase 2.*
 
