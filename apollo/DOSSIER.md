@@ -1,9 +1,9 @@
 # Breakwater Dossier: Apollo Programme
 
 **Document:** `apollo/DOSSIER.md`  
-**Version:** v0.2.0  
+**Version:** v1.0.0-draft  
 **Date:** 2026-04-04  
-**Status:** IN PROGRESS — Phase 1 active  
+**Status:** DRAFT — all 16 entries written; cross-entry audit complete; awaiting review  
 **Schema:** Breakwater Claim Analysis Ledger v1.0-rc  
 
 ---
@@ -1002,4 +1002,61 @@ The claim is supported on both the mass figure (~381.7 kg ≈ "approximately 382
 
 ## Cross-Entry Audit
 
-*To be written at Step 1j after all entries are complete.*
+### 1. Classification Distribution
+
+| Classification | Count | Entries |
+|----------------|-------|---------|
+| COMPATIBLE | 14 | 001, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 016 |
+| INCONSISTENT | 1 | 002 (budget adherence) |
+| UNDERDETERMINED | 1 | 015 (psychological safety) |
+
+**Observation:** The high COMPATIBLE rate (87.5%) partly reflects the maturity of Apollo historiography — most claims about a 50-year-old programme have already been tested by multiple historians. However, this also triggers Guardian flag G-1 (Apollo hagiography). The two non-COMPATIBLE entries provide critical balance:
+
+- CL-APOLLO-002 (INCONSISTENT) demonstrates that the dossier does not rubber-stamp all Apollo claims. The programme exceeded its budget by ~27%.
+- CL-APOLLO-015 (UNDERDETERMINED) demonstrates that the schema can recognise when a claim's framing exceeds the available evidence — even when the underlying reality is broadly positive.
+
+### 2. Inter-Entry Dependencies
+
+The following entries have logical dependencies or shared evidence:
+
+| Relationship | Entries | Nature |
+|-------------|---------|--------|
+| **Fire → Redesign** | 008 → 007 | CL-APOLLO-008 (fire causes) is a factual prerequisite for CL-APOLLO-007 (redesign driver). The 007 classification depends on 008 being COMPATIBLE. |
+| **Failures → Learning** | 008, 009 → 010 | CL-APOLLO-010 (organisational learning) draws evidence from both failure entries. If either failure analysis were reclassified, 010 would need review. |
+| **Learning → Culture** | 010 → 015 | CL-APOLLO-010 (learning) and CL-APOLLO-015 (safety culture) address overlapping evidence (post-fire reforms, reporting mechanisms). 010's COMPATIBLE and 015's UNDERDETERMINED reflect the distinction between institutional response (measurable) and cultural quality (harder to measure). |
+| **Testing → Schedule** | 004 → 001 | CL-APOLLO-004 (all-up testing) provides part of the causal explanation for how CL-APOLLO-001 (decade goal) was achievable. If 004 were reclassified, 001 would remain COMPATIBLE (the landing happened) but the explanatory model would weaken. |
+| **Architecture chain** | 006 → 016 → 004 → 001 | LOR selection (006), built on Gemini capabilities (016), enabled by all-up testing schedule (004), achieving the programme objective (001). This chain represents the dominant explanatory narrative and should be read as a connected sequence. |
+| **Budget → Cancellation** | 002 → 012 | CL-APOLLO-002's INCONSISTENT (budget overrun) provides direct evidence for CL-APOLLO-012 (cancellation was budget-driven). The budget overrun is both a finding in itself and an explanatory factor for the programme's curtailment. |
+
+### 3. Guardian Flag Compliance
+
+| Flag | Risk | Mitigation in Dossier | Assessment |
+|------|------|----------------------|------------|
+| G-1 | Apollo hagiography | CL-APOLLO-002 (INCONSISTENT) and CL-APOLLO-015 (UNDERDETERMINED) demonstrate the schema can produce non-COMPATIBLE results. | **Addressed** |
+| G-2 | Survivorship bias | Batch 3 explicitly analyses failures (Apollo 1, Apollo 13). CL-APOLLO-012 examines programme curtailment. | **Addressed** |
+| G-3 | Presentism | All scope statements specify period context. CL-APOLLO-006 constrains "optimal" to 1962 conditions. CL-APOLLO-015 avoids applying modern psychological safety frameworks retrospectively. | **Addressed** |
+| G-4 | Source quality | Every entry cites ≥1 [P] source. Review Board reports (A-P02, A-P03) are primary sources for failure entries. | **Compliant** |
+| G-5 | Political sensitivity | Not applicable to Apollo (programme concluded 1972). | **N/A** |
+| G-6 | Retrospective determinism | All Batch 2 entries include ≥1 plausible alternative architecture or approach. CL-APOLLO-006 explicitly analyses DA and EOR. CL-APOLLO-004 acknowledges pogo risk trade-off. | **Compliant** |
+| G-7 | Source coupling bias | All entries cite ≥1 non-NASA source. Logsdon, Johnson, Murray & Cox, Mindell, Siddiqi, and Vaughan provide external perspectives. | **Compliant** |
+
+### 4. Unresolved Items
+
+| Item | Entry | Issue | Action Required |
+|------|-------|-------|-----------------|
+| Counterfactual precision | CL-APOLLO-004 | The "10–12 flights saved" estimate varies by source. A more rigorous counterfactual reconstruction would strengthen the entry. | Low priority — claim holds under conservative estimates. |
+| Psychological safety evidence | CL-APOLLO-015 | The UNDERDETERMINED classification reflects genuine evidentiary limits. A systematic study of anomaly reporting rates would resolve the discriminant condition but may not be feasible. | Flagged as SPECULATIVE in entry. |
+| Budget methodology | CL-APOLLO-002 | The ~27% overrun figure uses nominal dollars. Inflation-adjusted comparison yields different variance. A sensitivity analysis across deflators would sharpen the INCONSISTENT finding. | Medium priority — the direction of inconsistency is clear regardless of methodology. |
+| Sample mass rounding | CL-APOLLO-013 | The "~382 kg" commonly cited figure versus the ~381.7 kg ALSJ total is a minor discrepancy within stated tolerance. No action needed but noted for precision. | None — within scope tolerance. |
+
+### 5. Cross-Programme Connections
+
+The following Apollo entries have direct relevance to other programme dossiers:
+
+| Apollo Entry | Related Programme | Connection |
+|-------------|-------------------|------------|
+| CL-APOLLO-006 (LOR) | Luna (CL-LUNA-005) | The Soviet N1/L3 programme attempted a similar LOR architecture but failed at the launcher stage. |
+| CL-APOLLO-010 (learning) | Chandrayaan (CL-CHANDRA-002, -003) | ISRO's post-Chandrayaan-2 failure response mirrors Apollo's post-failure learning pattern: team retention, failure-based redesign, successful next mission. |
+| CL-APOLLO-013 (samples) | Chang'e (CL-CHANGE-003) | Chang'e 5 and 6 samples are directly compared against Apollo samples, extending the Apollo collection's scientific utility. |
+| CL-APOLLO-004 (all-up) | Chang'e (CL-CHANGE-004) | China's four-phase incremental approach is the methodological opposite of Mueller's all-up philosophy — both succeeded, testing different risk/schedule trade-offs. |
+| CL-APOLLO-011 (legacy) | Artemis (CL-ARTEMIS-001) | Artemis programme management draws on Apollo-era practices (configuration control, design reviews) while adapting to a distributed commercial architecture. |
