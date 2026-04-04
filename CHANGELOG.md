@@ -6,6 +6,34 @@ This project adheres to Harbour Versioning.
 
 ---
 
+## [1.0.0-draft] — 2026-04-04
+
+### Added
+- **Apollo Dossier** (`apollo/DOSSIER.md` v1.0.0-draft): All 16 ledger entries written (14 COMPATIBLE, 1 INCONSISTENT, 1 UNDERDETERMINED). Cross-entry audit complete with dependency map, Guardian flag compliance, and cross-programme connections.
+- **Artemis Dossier** (`artemis/DOSSIER.md` v1.0.0-draft): All 6 ledger entries written with Type P extensions (2 COMPATIBLE, 3 INCONSISTENT, 1 UNDERDETERMINED). Cross-entry audit with validity horizon analysis.
+- **Comparative Essay** (`essays/two-returns.md` v1.0.0-draft): "Five Paths to the Moon" — nine-section analysis of error-correction architectures across Apollo, Luna, Chang'e, Chandrayaan, and Artemis. Integration-exploration axis as analytical framework.
+- **Council Reflexion** (`meta/COUNCIL-NOTES.md` v1.0.0-draft): Five actionable lessons for Council-3 architecture derived from the dossier project.
+- **All canonical appendices populated** (13 files across 5 programmes) from reconciled agent swarm outputs with Harbourmaster corrections applied.
+- **Swarm assessment and verification documents** under `meta/`.
+
+### Changed
+- All Apollo entry statuses: PENDING → DRAFT in `meta/ID-REGISTRY.md`.
+- All Artemis entry statuses: PENDING → DRAFT in `meta/ID-REGISTRY.md`.
+- `TASKCARDS.md` moved from root to `meta/TASKCARDS.md`.
+
+### Harbourmaster Corrections Applied
+- Apollo sample masses corrected to ALSJ primary records (A15: 77.31 kg, A16: 95.71 kg).
+- Apollo 204 Review Board date corrected to 5 April 1967.
+- Artemis II status updated: launched 1 April 2026.
+- Artemis III–V restructured per Feb–Mar 2026 announcements.
+- Lunar Gateway: cancelled March 2026.
+- Luna 25: BIUS-L root cause chain added.
+- Chang'e 6 sample mass: 1,935.3 g (CNSA precise figure).
+- Chandrayaan-2: failure recharacterised (fine braking phase, Doppler confirmation).
+- Chandrayaan-3: cost breakdown added (₹615 crore).
+
+---
+
 ## [0.3.0] — 2026-04-04
 
 ### Added

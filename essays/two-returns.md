@@ -3,9 +3,9 @@
 **Subtitle:** Error-Correction Architectures in Lunar Exploration  
 **Document:** `essays/two-returns.md`  
 **Epistemic Layer:** Sails  
-**Version:** v0.0.1  
+**Version:** v1.0.0-draft  
 **Date:** 2026-04-04  
-**Status:** PLACEHOLDER — awaiting Phase 3  
+**Status:** DRAFT — awaiting Council-3 review (Step 3c)  
 
 ---
 
@@ -36,4 +36,139 @@ The analytical axis is **integration vs. exploration** — when does tight coupl
 
 ---
 
-*To be written after all dossiers are complete.*
+## I. Five Systems, One Question
+
+Between 1958 and 2026, five distinct organisations attempted to land machines or people on the Moon. Each succeeded at least once. Each failed at least once. What separates them is not ambition or physics — the Moon is the same distance from Moscow, Houston, Beijing, Bengaluru, and Boca Chica — but the architecture of their error-correction systems. How did each programme detect that something was wrong, and what did it do next?
+
+This is not a rankings exercise. The Breakwater dossiers (Apollo, Artemis, Luna, Chang'e, Chandrayaan) provide the coastline — measured claims, classified against evidence. This essay provides one possible key: the observation that the five programmes represent five distinct answers to the same fundamental problem of engineering under uncertainty.
+
+The analytical axis is **integration versus exploration**. Tight integration — centralised authority, formal configuration control, comprehensive testing — minimises interface failures and ensures consistency. But it is expensive, slow, and can suppress the adaptive signals that come from accepting partial failure as information. Loose exploration — competitive design bureaux, rapid iteration, tolerance for loss — generates information faster but risks incoherence. Every programme sits somewhere on this axis, and the interesting question is not which position is "best" but what each position's error-correction signature looks like.
+
+---
+
+## II. Apollo: The Hierarchical Controller
+
+Apollo's error-correction architecture was the five-box management structure imposed by George Mueller in 1963 (CL-APOLLO-005 / CL-2026-007). Programme Control, Systems Engineering, Testing, Reliability & Quality, and Flight Operations were mirrored at every centre and every contractor. Information flowed vertically (centre directors to Headquarters) and horizontally (functional counterparts across centres). Samuel Phillips' monthly reviews enforced schedule and cost visibility. Configuration control boards gated every engineering change.
+
+This was a machine for preventing errors from propagating. And it worked: across 11 crewed Apollo missions, the CSM-LM-Saturn V interface — the most complex integration boundary in the programme — never suffered a systemic failure (CL-APOLLO-005). The all-up testing philosophy (CL-APOLLO-004 / CL-2026-006) compressed the test schedule by accepting higher first-flight risk, but within a framework where every system was tracked, reviewed, and gated.
+
+The architecture's response to failure was equally characteristic. After the Apollo 1 fire (CL-APOLLO-008 / CL-2026-010), the system produced 1,400 engineering changes, a new programme office leader (George Low), and a structural reform of contractor oversight. After the Apollo 13 oxygen tank failure (CL-APOLLO-009 / CL-2026-011), the response was faster and more focused — evidence of the organisation learning how to learn (CL-APOLLO-010 / CL-2026-012).
+
+But the architecture had limits. The Phillips Report — which identified serious contractor problems in 1965–66 — was kept internal to NASA. It surfaced a real problem through the review structure but then suppressed the signal at the political boundary. The psychological safety claim (CL-APOLLO-015 / CL-2026-017) was classified UNDERDETERMINED precisely because the evidence supports strong technical reporting culture *within* the engineering ranks but does not confirm that the culture was safe at every boundary. Apollo's error-correction was powerful but not omniscient — and it degraded at the seams between engineering and politics.
+
+The cost of this architecture was its budget (CL-APOLLO-002 / CL-2026-004, INCONSISTENT — 27% overrun) and its inflexibility. Apollo could not adapt to declining political support. When budgets fell, the programme did not descope gracefully; it cancelled missions entirely (CL-APOLLO-012 / CL-2026-014). The hierarchy that made Apollo reliable also made it brittle.
+
+---
+
+## III. Luna: The Opaque Competitor
+
+The Soviet Luna programme presents the inverse architecture. Where Apollo had one centralised hierarchy, the Soviet programme had multiple competing design bureaux — OKB-1 (Korolev), NPO Lavochkin (Babakin), OKB-52 (Chelomei) — each with direct access to political leadership and independent design authority.
+
+This produced extraordinary exploration speed. Between 1958 and 1966, the Luna programme achieved a sequence of firsts — first lunar impact (Luna 2, 1959), first far-side photograph (Luna 3, 1959), first soft landing (Luna 9, 1966), first orbital mission (Luna 10, 1966) — at a pace that no other programme has matched. The information generated by each mission (including the many failures) flowed directly into the next design iteration. The programme's 31% success rate looks poor by Apollo standards, but each failure was a data point in a rapid learning loop.
+
+The error-correction signature was fundamentally different from Apollo's. Where Apollo used formal configuration control to prevent errors, the Luna programme used mission volume to detect and correct errors empirically. Fail, learn, fly again. This worked brilliantly for robotic missions where the cost of failure was a spacecraft, not a crew.
+
+It failed catastrophically for the N1 crewed lunar programme (CL-LUNA-005 / CL-2026-029). The N1's 30-engine first stage was the most complex propulsion system ever attempted, and it failed on all four test launches. The competitive bureau structure that generated innovation for robotic missions could not produce the integration discipline that a crewed super-heavy launcher required. Korolev's death in 1966 removed the one figure who might have imposed integration across the bureaux. The N1 programme was cancelled in 1974 — a clear case where insufficient integration killed a programme that had no shortage of engineering talent.
+
+Luna 25's failure in 2023 (CL-LUNA-004 / CL-2026-028) reprised the theme 47 years later. The BIUS-L accelerometer failure — a domestically produced component replacing a previously imported one, after post-2014 sanctions disrupted the supply chain — demonstrates how political opacity and supply-chain fragility can propagate through a system that lacks the configuration control infrastructure to catch such substitutions.
+
+The Luna programme's lesson: exploration-first architectures generate information rapidly but cannot scale to the integration demands of crewed spaceflight without a structural change in error-correction mode.
+
+---
+
+## IV. Chang'e: The Phased Validator
+
+China's Chang'e programme is the most methodical of the five. Its four-phase structure — orbit (Chang'e 1–2), land (Chang'e 3–4), sample return (Chang'e 5–6), research station (Chang'e 7–8) — is an architecture for incremental validation (CL-CHANGE-001 / CL-2026-030). Each phase demonstrates a capability that the next phase requires. No phase is attempted before the prior phase succeeds.
+
+The error-correction signature is gated validation with a distinctive backup-to-primary redesign pattern (CL-CHANGE-004 / CL-2026-033). Chang'e 3's backup vehicle became Chang'e 4 — the first far-side landing (CL-CHANGE-002 / CL-2026-031). Chang'e 5's backup became Chang'e 6 — the first far-side sample return (CL-CHANGE-003 / CL-2026-032). In each case, flight-proven hardware was repurposed for a more ambitious objective. This is exploration within a framework of integration: innovation constrained by demonstrated capability.
+
+The programme's 100% mission success rate (6/6 completed missions) is the empirical payoff of this architecture. But it comes at a cost in pace. Chang'e has been operating since 2007 — nearly 20 years — and has not yet attempted a crewed landing. The phased approach requires patience that a programme under political urgency (as Apollo was) cannot afford.
+
+The Chang'e architecture is the methodological inverse of Mueller's all-up testing. Mueller accepted higher first-flight risk to compress the schedule (CL-APOLLO-004). Chang'e accepts longer schedules to minimise per-mission risk. Both strategies work; they optimise for different constraints. Apollo optimised for schedule under political pressure. Chang'e optimises for reliability under a long-term strategic programme with less acute deadline pressure.
+
+---
+
+## V. Chandrayaan: The Adaptive Iterator
+
+ISRO's Chandrayaan programme provides the clearest case study in failure-based design — a programme that explicitly reorganised its error-correction architecture in response to a specific failure.
+
+Chandrayaan-2's Vikram lander crashed during the fine braking phase at ~2.1 km altitude on 7 September 2019 (CL-CHANDRA-001 / CL-2026-036). The software glitch that caused trajectory deviation was the proximate cause, but the deeper issue was a success-path optimised design: the lander was designed for the case where everything worked, with limited margin for off-nominal performance.
+
+ISRO's response was extraordinary for its deliberateness. The same team was retained — no-blame mandate, no personnel changes (CL-CHANDRA-002 / CL-2026-037). The design philosophy was inverted: Chandrayaan-3 was designed against failure scenarios, not for the nominal case (CL-CHANDRA-003 / CL-2026-038). The landing zone was expanded from 500m × 500m to 4km × 2.5km. Fuel margin increased by 30%. A Laser Doppler Velocimeter was added specifically to cross-check the navigation system that had failed on Chandrayaan-2. Structural strength was enhanced for higher touchdown loads.
+
+The result: Chandrayaan-3 landed successfully at 69.37°S — the southernmost lunar landing ever — for approximately $75 million (CL-CHANDRA-004 / CL-2026-039; CL-CHANDRA-005 / CL-2026-040). The cost is approximately 10% of a comparable NASA mission.
+
+This is the most compact error-correction loop in the five programmes: failure → diagnosis → structural redesign → success, completed in four years at minimal cost. The "adaptive iteration" label captures the distinctive feature: ISRO did not fix the specific bug that caused the crash. It redesigned the *category* of vulnerability — moving from success-path to failure-path design, which is a change in error-correction architecture, not just a point fix.
+
+The parallel with Apollo is instructive. NASA's post-Apollo 1 response (CL-APOLLO-010 / CL-2026-012) also involved systemic redesign, not just proximate fixes. Both organisations demonstrated that effective error-correction requires changing the system that produced the error, not just the error itself. The difference is that ISRO did it under extreme resource constraint, suggesting that the essential ingredient is organisational learning capacity, not budget.
+
+---
+
+## VI. Artemis: The Federated Experiment
+
+Artemis is the most architecturally novel — and the most uncertain — of the five programmes. Its error-correction architecture is still forming, which is why the Artemis dossier has the lowest COMPATIBLE rate (33%) of any programme assessed.
+
+The programme's distinctive feature is its federated structure: NASA provides SLS and Orion; SpaceX provides Starship HLS; Blue Origin provides Blue Moon; Axiom provides spacesuits; ESA provides the service module; commercial providers deliver robotic payloads via CLPS. No single entity controls the full stack. This is neither Apollo's hierarchy nor the Soviet competitive bureau model — it is something new, a distributed architecture with commercial integration.
+
+The Starship HLS selection (CL-ARTEMIS-005 / CL-2026-023, COMPATIBLE) represents a genuine paradigm shift: 100,000 kg to the lunar surface versus Apollo LM's 300 kg of science payload. But the enabling architecture — orbital propellant transfer at scale — is unproven (GAO's primary concern). The programme is betting on a capability that does not yet exist.
+
+The schedule record (CL-ARTEMIS-004 / CL-2026-022, INCONSISTENT) shows the cost of this architecture: every mission has slipped 12–32 months. The February–March 2026 restructuring — Artemis III redefined as an LEO test, Gateway cancelled (CL-ARTEMIS-006 / CL-2026-024, INCONSISTENT), Artemis Base Camp announced — represents the programme's error-correction in action. The programme detected that its original architecture (Gateway as cislunar waypoint) was not essential and redirected resources. This is, in principle, the kind of adaptive signal that a well-functioning programme should produce.
+
+But the restructuring also reveals the federated model's vulnerability: when multiple independent actors are developing subsystems on different timelines, the programme's schedule is determined by the slowest critical-path element. Apollo's hierarchy could push all elements toward a common deadline. Artemis cannot — it must wait for SpaceX's propellant transfer, Blue Origin's lander, Axiom's suits, and its own SLS/Orion cadence to converge.
+
+The open question is whether Artemis's federated model is a feature or a failure mode. If the commercial partners deliver — if Starship HLS works, if propellant transfer scales — then the federated model will have produced capabilities far beyond what any single-entity programme could have achieved. If they do not, the programme will have distributed its critical path across actors it cannot directly control, which is the precise vulnerability that Apollo's hierarchy was designed to prevent.
+
+---
+
+## VII. The Axis
+
+The five programmes can be placed on the integration-exploration axis:
+
+```
+← MORE INTEGRATED                                    MORE EXPLORATORY →
+
+   Apollo        Chang'e        Artemis         Chandrayaan       Luna
+   (hierarchy)   (phased gates) (federated)     (adaptive iter.)  (competitive)
+```
+
+This ordering reveals a pattern: the most integrated programmes (Apollo, Chang'e) have the highest mission success rates but the slowest pace or highest cost. The most exploratory (Luna) generated the most firsts but could not scale to crewed complexity. The adaptive programmes (Chandrayaan, Artemis) sit in between — they trade some integration control for learning speed.
+
+But the axis is not static. Programmes move along it in response to failure:
+- Apollo moved *toward* integration after Apollo 1 (independent verification, materials control).
+- Chandrayaan moved *toward* integration after Chandrayaan-2 (failure-based design, additional sensors).
+- Artemis moved *away from* integration in March 2026 (Gateway cancelled, resources redirected to surface).
+- The Soviet programme *failed to move* toward integration for the N1, and the programme died.
+
+The critical insight is not where a programme sits on the axis at any given moment, but whether it can *move* along the axis when its current position proves wrong. Apollo could tighten after Apollo 1. Chandrayaan could restructure after Vikram. The Soviet N1 programme could not integrate after Korolev's death. Artemis's March 2026 restructuring suggests the federated model can adapt — but the adaptation was a simplification (cancel Gateway), not an integration (impose tighter control). Whether the programme can also tighten when required remains untested.
+
+---
+
+## VIII. Error-Correction as the Signature
+
+Each programme's error-correction architecture reveals its deepest assumptions about uncertainty:
+
+| Programme | Assumption about uncertainty | Error-correction mode | Failure when wrong |
+|-----------|-----------------------------|-----------------------|-------------------|
+| **Apollo** | Uncertainty can be controlled through process | Prevention (configuration control, reviews, gates) | Brittleness — when budgets fall, the system cancels rather than adapts |
+| **Luna** | Uncertainty is reduced by flying often | Empirical iteration (fly, fail, learn, repeat) | Cannot scale to crewed complexity — insufficient integration |
+| **Chang'e** | Uncertainty is reduced by staged validation | Gated phasing (prove capability before extending) | Slow — requires decades for ambitious objectives |
+| **Chandrayaan** | Uncertainty is irreducible; design against failure | Failure-based redesign (invert assumptions after crash) | Depends on team retention and institutional learning — fragile to personnel changes |
+| **Artemis** | Uncertainty is distributed across partners | Federated integration (multiple actors, loosely coupled) | Schedule determined by slowest critical path; no single authority can accelerate |
+
+These are not just engineering choices. They are epistemic positions — each programme's answer to the question: *what do you do when you don't know what you don't know?*
+
+Apollo's answer was: build a system that ensures you *do* know. Mueller's five-box structure was a knowledge machine — it assumed that with enough process, enough reviews, enough configuration control, the unknown unknowns could be converted to known unknowns and then resolved. This worked spectacularly for a programme of bounded scope (land and return) and bounded duration (before decade's end). It could not adapt when the scope changed (sustained presence) or the budget disappeared.
+
+ChatGPT's swarm-experiment contribution is relevant here. ChatGPT was the only agent that refused to populate fields it could not verify, producing ~200 `[VERIFY]` markers instead. This is the Guardian principle: the system that knows what it doesn't know is safer than the system that doesn't know what it doesn't know. Apollo's post-fire reforms moved toward this principle. Artemis's schedule record suggests the programme has not yet internalised it — the optimistic baseline schedules that required revision are the programmatic equivalent of filling in a field you cannot verify.
+
+---
+
+## IX. One Moon, Five Keys
+
+The Moon is a mirror. Each programme that reaches for it sees reflected its own assumptions about how to act under uncertainty. Apollo saw a problem to be managed; it built a hierarchy. The Soviet programme saw a race to be won; it ran fast and broke things. China saw a capability to be earned; it built a staircase. India saw a lesson to be learned; it failed, understood why, and redesigned. Artemis sees a market to be created; it distributed the work and hopes the pieces converge.
+
+None of these is wrong. Each works within its constraints. The error — the one error that recurs across all five programmes — is the failure to recognise when the constraint regime has changed and the architecture must move along the axis. Apollo could not descope. The Soviet N1 could not integrate. Artemis has not yet been tested by the kind of failure that forces a regime shift.
+
+The dossiers measure. This essay interprets. The measurement says: five programmes, five architectures, five distinct patterns of success and failure. The interpretation says: the quality that matters most is not the architecture itself but its capacity for self-correction — the ability to detect when your current position on the integration-exploration axis is wrong, and to move.
+
+That capacity is what the Council-3 framework calls the Guardian function. And it is the subject of the reflexive notes that follow.
