@@ -26,14 +26,14 @@
 | CL-APOLLO-005 | CL-2026-007 | Five-box management structure | DRAFT |
 | CL-APOLLO-006 | CL-2026-008 | Lunar Orbit Rendezvous optimality | DRAFT |
 | CL-APOLLO-007 | CL-2026-009 | Block I → Block II redesign driver | DRAFT |
-| CL-APOLLO-008 | CL-2026-010 | Apollo 1 fire causal factors | PENDING |
-| CL-APOLLO-009 | CL-2026-011 | Apollo 13 cascading failure | PENDING |
-| CL-APOLLO-010 | CL-2026-012 | Post-failure organisational learning | PENDING |
-| CL-APOLLO-011 | CL-2026-013 | Management innovation legacy | PENDING |
-| CL-APOLLO-012 | CL-2026-014 | Cancellation drivers | PENDING |
-| CL-APOLLO-013 | CL-2026-015 | Lunar sample scientific value | PENDING |
+| CL-APOLLO-008 | CL-2026-010 | Apollo 1 fire causal factors | DRAFT |
+| CL-APOLLO-009 | CL-2026-011 | Apollo 13 cascading failure | DRAFT |
+| CL-APOLLO-010 | CL-2026-012 | Post-failure organisational learning | DRAFT |
+| CL-APOLLO-011 | CL-2026-013 | Management innovation legacy | DRAFT |
+| CL-APOLLO-012 | CL-2026-014 | Cancellation drivers | DRAFT |
+| CL-APOLLO-013 | CL-2026-015 | Lunar sample scientific value | DRAFT |
 | CL-APOLLO-014 | CL-2026-016 | Apollo Guidance Computer pioneering role | DRAFT |
-| CL-APOLLO-015 | CL-2026-017 | Psychological safety culture | PENDING |
+| CL-APOLLO-015 | CL-2026-017 | Psychological safety culture | DRAFT |
 | CL-APOLLO-016 | CL-2026-018 | Incremental capability build-up (Mercury → Gemini → Apollo) | DRAFT |
 
 ## Artemis Programme

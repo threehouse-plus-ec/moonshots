@@ -59,18 +59,18 @@ Local candidate framework. This dossier measures claims; it does not endorse the
 
 | Entry ID | Global ID | Short Title | Classification | Status |
 |----------|-----------|-------------|----------------|--------|
-| CL-APOLLO-008 | CL-2026-010 | Apollo 1 fire causal factors | — | PENDING |
-| CL-APOLLO-009 | CL-2026-011 | Apollo 13 cascading failure | — | PENDING |
-| CL-APOLLO-010 | CL-2026-012 | Post-failure organisational learning | — | PENDING |
-| CL-APOLLO-015 | CL-2026-017 | Psychological safety culture | — | PENDING |
+| CL-APOLLO-008 | CL-2026-010 | Apollo 1 fire causal factors | — | DRAFT |
+| CL-APOLLO-009 | CL-2026-011 | Apollo 13 cascading failure | — | DRAFT |
+| CL-APOLLO-010 | CL-2026-012 | Post-failure organisational learning | — | DRAFT |
+| CL-APOLLO-015 | CL-2026-017 | Psychological safety culture | — | DRAFT |
 
 ### Batch 4 — Legacy & Historiographic Claims
 
 | Entry ID | Global ID | Short Title | Classification | Status |
 |----------|-----------|-------------|----------------|--------|
-| CL-APOLLO-011 | CL-2026-013 | Management innovation legacy | — | PENDING |
-| CL-APOLLO-012 | CL-2026-014 | Cancellation drivers | — | PENDING |
-| CL-APOLLO-013 | CL-2026-015 | Lunar sample scientific value | — | PENDING |
+| CL-APOLLO-011 | CL-2026-013 | Management innovation legacy | — | DRAFT |
+| CL-APOLLO-012 | CL-2026-014 | Cancellation drivers | — | DRAFT |
+| CL-APOLLO-013 | CL-2026-015 | Lunar sample scientific value | — | DRAFT |
 
 ---
 
@@ -585,6 +585,418 @@ The evidence strongly supports that Gemini capabilities were necessary precondit
 - A-P08: Cortright, E. M. (ed.). *Apollo Expeditions to the Moon.* NASA SP-350. 1975.
 - A-S09: Hansen, J. R. *First Man.* Simon & Schuster, 2005.
 - Siddiqi, A. *Challenge to Apollo.* NASA SP-2000-4408. 2000.
+
+---
+
+### CL-APOLLO-008 — Apollo 1 Fire Causal Factors
+
+**Entry ID:** CL-APOLLO-008  
+**Global ID:** CL-2026-010  
+**Selection Mode:** REQUEST  
+**Domain:** Safety engineering, failure analysis  
+**Scope:** Whether the Apollo 1 fire was caused by the combination of a pure-oxygen atmosphere, flammable cabin materials, and an inward-opening hatch. Per the Apollo 204 Review Board findings.  
+**Op. Fidelity:** High — the Review Board investigation is the primary authoritative source; the causal factors are well established.
+
+#### Section A — Claim
+
+The Apollo 1 fire was caused by the combination of a pure-oxygen atmosphere, flammable cabin materials, and an inward-opening hatch.
+
+#### Section B — Predictions
+
+If the claim is true, we expect:
+
+1. The cabin atmosphere was pure oxygen at elevated pressure at the time of the fire.
+2. Flammable materials were present in the cabin in quantities sufficient to sustain a fire in a pure-oxygen environment.
+3. The hatch design prevented the crew from escaping in the time available.
+4. The Review Board identified all three factors as contributing causes.
+5. Post-fire corrective actions addressed all three factors specifically.
+
+#### Section C — Constraints
+
+1. The Apollo 204 Review Board report (dated 5 April 1967) found that the fire occurred during a plugs-out test on 27 January 1967 with the cabin pressurised to approximately 16.7 psi (115 kPa) of pure oxygen — higher than operational flight pressure and significantly above the partial pressure of oxygen in normal atmosphere. [Source: A-P02]
+2. The Board identified the probable ignition source as electrical wiring near the left-hand equipment bay, though the exact ignition point could not be determined with certainty. [Source: A-P02]
+3. The Board documented extensive flammable materials in the cabin: approximately 70 lb (32 kg) of non-metallic materials including Velcro, nylon netting, polyurethane foam, and Raschel-knit material. These materials were not inherently dangerous in normal atmosphere but were highly flammable in pure oxygen at 16.7 psi. [Source: A-P02]
+4. The Block I hatch was a three-piece design requiring approximately 90 seconds to open under normal conditions. Internal pressure from the fire (estimated to have reached ~29 psi) made it impossible to open, as the design opened inward against the pressure differential. [Source: A-P02]
+5. The crew — Grissom, White, and Chaffee — died from cardiac arrest due to inhalation of toxic gases (primarily carbon monoxide) within approximately 30 seconds of the fire's rapid propagation. [Source: A-P02]
+6. Post-fire corrective actions included: replacement of the hatch with an outward-opening quick-release design; replacement of flammable materials with fire-resistant alternatives; adoption of a mixed-gas atmosphere (60% O2 / 40% N2) at sea level pressure during ground operations; and comprehensive wiring protection. [Source: A-P02; Appendix 1C]
+
+#### Section D — Comparison
+
+Prediction 1: **Confirmed.** Pure O2 at 16.7 psi — approximately 5× the partial pressure of oxygen in normal air.  
+Prediction 2: **Confirmed.** ~32 kg of flammable materials documented by the Review Board.  
+Prediction 3: **Confirmed.** Inward-opening hatch could not be opened against fire-generated pressure.  
+Prediction 4: **Confirmed.** All three factors are explicitly identified in the Review Board report as contributing causes.  
+Prediction 5: **Confirmed.** All three factors were addressed by specific corrective actions (atmosphere, materials, hatch).
+
+**Note on ignition source:** The Review Board could not identify the exact ignition point. The claim addresses the enabling conditions (atmosphere, materials, hatch) rather than the triggering event. This is consistent with the Board's own framing — the fire was made possible and lethal by the combination of conditions, regardless of the specific ignition source.
+
+#### Section E — Classification
+
+**COMPATIBLE**
+
+The claim is directly supported by the Apollo 204 Review Board findings. All three causal factors are confirmed by the primary source. The corrective actions that addressed each factor provide additional confirmatory evidence.
+
+#### Section F — Bibliography
+
+- A-P02: *Report of Apollo 204 Review Board to the Administrator, NASA.* 1967.
+- A-S02: Brooks, C. G. et al. *Chariots for Apollo.* NASA SP-4205. 1979.
+
+---
+
+### CL-APOLLO-009 — Apollo 13 Cascading Failure
+
+**Entry ID:** CL-APOLLO-009  
+**Global ID:** CL-2026-011  
+**Selection Mode:** REQUEST  
+**Domain:** Systems engineering, failure analysis  
+**Scope:** Whether the Apollo 13 oxygen tank failure was a cascading systems failure with identifiable root causes traceable to a design change, a manufacturing incident, and a testing procedure. Root cause chain as specified: 28V→65V heater power oversight, tank drop at manufacturer, extended heating during ground test, Teflon insulation damage.  
+**Op. Fidelity:** High — the Apollo 13 Review Board investigation provides a detailed causal chain.
+
+#### Section A — Claim
+
+The Apollo 13 oxygen tank failure was a cascading systems failure with identifiable root causes traceable to a design change, manufacturing incident, and testing procedure.
+
+#### Section B — Predictions
+
+If the claim is true, we expect:
+
+1. A specific design change introduced a latent vulnerability into the oxygen tank system.
+2. A manufacturing incident further degraded the tank's condition.
+3. A testing procedure activated the latent vulnerability, causing damage that was not detected.
+4. The in-flight failure can be traced causally through all three factors in sequence.
+5. The failure was not a random or unpredictable event — it was a deterministic consequence of the causal chain.
+
+#### Section C — Constraints
+
+1. Oxygen tank #2 in Service Module 109 was originally installed in Service Module 106 (intended for Apollo 10). During removal at North American Rockwell, the shelf was inadvertently dropped approximately 5 cm (2 inches). The tank was inspected but the internal fill tube fitting was slightly damaged, though this was not detected. [Source: A-P03, Cortright Review Board]
+2. The tank's heater thermostatic switches were designed for 28V DC power (the spacecraft bus voltage). In 1965, a design change upgraded the ground support equipment (GSE) power supply from 28V to 65V DC. The thermostatic switches — rated for 28V — were not updated to accommodate the higher voltage. This oversight was not caught in the design review process. [Source: A-P03]
+3. During the Countdown Demonstration Test (CDDT) at Kennedy Space Center, technicians were unable to empty oxygen tank #2 normally (likely due to the damaged fill tube from the drop). To empty the tank, they used the internal heaters to boil off the oxygen — running the heaters on 65V GSE power for approximately 8 hours. [Source: A-P03]
+4. The 65V power caused the thermostatic switches to weld shut (they were rated to break a 28V arc, not 65V). With the switches welded open, the heaters ran without thermal protection, reaching internal temperatures estimated at 538°C (1,000°F) — far exceeding the 27°C (80°F) normal operating range. This destroyed the Teflon insulation on the internal wiring. [Source: A-P03]
+5. On 13 April 1970, at approximately 55:54:53 GET, a routine fan stir in oxygen tank #2 caused a short circuit through the damaged wiring, igniting the Teflon insulation in the pure-oxygen environment. The resulting pressure increase ruptured the tank and damaged the adjacent oxygen tank #1, leading to loss of both oxygen tanks and the fuel cells they supplied. [Source: A-P03]
+6. The crew survived by using the Lunar Module as a lifeboat, performing a free-return trajectory around the Moon, and splashing down safely on 17 April 1970. [Source: A-P03; A-P01]
+
+#### Section D — Comparison
+
+Prediction 1: **Confirmed.** The 28V→65V power change was the design vulnerability. The thermostatic switches were never updated.  
+Prediction 2: **Confirmed.** The tank drop damaged the fill tube, leading to the inability to empty the tank normally during CDDT.  
+Prediction 3: **Confirmed.** The extended heating during CDDT (8 hours on 65V) welded the switches and destroyed the Teflon insulation.  
+Prediction 4: **Confirmed.** The causal chain proceeds: design change (65V) → drop (damaged fill tube) → extended heating (insulation damage) → in-flight short circuit → tank rupture → cascading loss.  
+Prediction 5: **Confirmed.** Each step in the chain was a deterministic consequence of the prior step and an identifiable human or process error. The Review Board traced the complete chain.
+
+#### Section E — Classification
+
+**COMPATIBLE**
+
+The claim is comprehensively supported by the Apollo 13 Review Board findings. The failure was a textbook cascading systems failure with a fully traceable causal chain through design, manufacturing, and testing domains.
+
+#### Section F — Bibliography
+
+- A-P01: NASA. *Apollo Program Summary Report.* JSC-09423. 1975.
+- A-P03: Cortright, E. M. (chair). *Report of Apollo 13 Review Board.* NASA. 1970.
+- A-S02: Brooks, C. G. et al. *Chariots for Apollo.* NASA SP-4205. 1979.
+
+---
+
+### CL-APOLLO-010 — Post-Failure Organisational Learning
+
+**Entry ID:** CL-APOLLO-010  
+**Global ID:** CL-2026-012  
+**Selection Mode:** REQUEST  
+**Domain:** Organisational behaviour, safety engineering  
+**Scope:** Whether NASA's post-failure responses (Apollo 1 → Apollo 7; Apollo 13 → Apollo 14) demonstrated effective organisational learning. "Effective" is measurable via: design changes implemented, review board recommendations adopted, and subsequent mission success rate.  
+**Op. Fidelity:** Moderate — "effective organisational learning" involves qualitative judgement; the proxy indicators provide quantitative support.
+
+#### Section A — Claim
+
+NASA's post-failure responses (Apollo 1 → 7; Apollo 13 → 14) demonstrated effective organisational learning.
+
+#### Section B — Predictions
+
+If the claim is true, we expect:
+
+1. Review board recommendations were substantially implemented before the next crewed flight.
+2. The specific failure modes that caused each incident did not recur.
+3. The next mission after each failure was successful.
+4. Systemic changes (not just point fixes) were made to prevent related failure classes.
+5. The organisation's failure response improved between the two incidents (i.e., Apollo 13 response was more mature than Apollo 1 response).
+
+*Plausible alternative:* Organisations often implement point fixes for specific failures without addressing systemic vulnerabilities. NASA might have fixed the proximate causes without genuine organisational learning — "learning the lesson" versus "learning from the lesson."
+
+#### Section C — Constraints
+
+**Apollo 1 → Apollo 7:**
+1. The Apollo 204 Review Board made extensive recommendations. NASA implemented 1,400+ engineering changes to the Block II spacecraft. [Source: A-P02; Appendix 1C]
+2. Systemic changes included: new atmospheric protocol (60/40 N2/O2 at launch), outward-opening hatch, fire-resistant materials programme, protected wiring, and independent NASA verification of contractor work (ending contractor self-certification). [Source: A-P02]
+3. George Low was appointed to manage the redesign, representing a leadership change specifically responding to the failure. [Source: A-S02]
+4. Apollo 7 (October 1968) was successful — 11-day Earth orbit mission with no safety incidents. All subsequent Apollo missions used Block II. [Source: A-P01]
+5. The specific failure mode (fire in pure O2 at elevated pressure) never recurred. [Source: A-P01]
+
+**Apollo 13 → Apollo 14:**
+6. The Apollo 13 Review Board identified the root cause chain (see CL-APOLLO-009). NASA implemented: redesigned oxygen tanks with improved thermostatic protection, removal of Teflon from tanks, addition of a third oxygen tank in an isolated bay, modified GSE power procedures, and enhanced monitoring. [Source: A-P03]
+7. Apollo 14 launched on 31 January 1971 — 9.5 months after Apollo 13 — and completed a successful lunar landing. [Source: A-P01]
+8. The specific failure mode (oxygen tank wire damage leading to rupture) never recurred. [Source: A-P01]
+9. Murray & Cox (1989) argue that NASA's Apollo 13 response was faster and more focused than the Apollo 1 response, reflecting organisational maturation in failure management. [Source: A-S03]
+
+#### Section D — Comparison
+
+Prediction 1: **Confirmed.** 1,400+ changes after Apollo 1; redesigned oxygen system after Apollo 13. Both sets of recommendations were substantially implemented.  
+Prediction 2: **Confirmed.** Neither the Apollo 1 fire conditions nor the Apollo 13 tank failure recurred in any subsequent mission.  
+Prediction 3: **Confirmed.** Apollo 7 (post-fire) and Apollo 14 (post-13) were both successful.  
+Prediction 4: **Confirmed.** Post-Apollo 1 changes were systemic (atmospheric protocol, materials programme, verification process). Post-13 changes included both point fixes (tank redesign) and systemic improvements (GSE power procedures, monitoring).  
+Prediction 5: **Supported.** The Apollo 13 recovery took 9.5 months versus 21 months after Apollo 1. Murray & Cox characterise the Apollo 13 response as more disciplined and efficient.
+
+**Limitation:** Success rate after a failure is a weak indicator by itself — it could reflect luck rather than learning. The stronger evidence is the combination of: systemic changes implemented, specific failure modes eliminated, and the maturation pattern between the two incidents.
+
+#### Section E — Classification
+
+**COMPATIBLE**
+
+The evidence supports effective organisational learning across both post-failure responses. The combination of systemic changes, non-recurrence of specific failure modes, subsequent mission success, and maturation between incidents satisfies the proxy indicators.
+
+#### Section F — Bibliography
+
+- A-P01: NASA. *Apollo Program Summary Report.* JSC-09423. 1975.
+- A-P02: *Report of Apollo 204 Review Board.* NASA. 1967.
+- A-P03: Cortright, E. M. *Report of Apollo 13 Review Board.* NASA. 1970.
+- A-S02: Brooks, C. G. et al. *Chariots for Apollo.* NASA SP-4205. 1979.
+- A-S03: Murray, C. & Cox, C. B. *Apollo: The Race to the Moon.* Simon & Schuster, 1989.
+
+---
+
+### CL-APOLLO-015 — Psychological Safety Culture
+
+**Entry ID:** CL-APOLLO-015  
+**Global ID:** CL-2026-017  
+**Selection Mode:** REQUEST  
+**Domain:** Organisational behaviour, safety culture  
+**Scope:** Whether a psychologically safe reporting culture contributed to Apollo's engineering reliability. "Psychologically safe" means engineers could report anomalies, dissent from management decisions, and flag concerns without career penalty. Proxy indicators: anomaly reporting rates pre/post key incidents; post-mortem transparency. The "champagne-bottle anecdote" (engineers celebrating after identifying problems rather than hiding them) is illustrative, not dispositive.  
+**Op. Fidelity:** Low-to-moderate — organisational culture is difficult to measure directly; evidence is largely qualitative and retrospective.
+
+#### Section A — Claim
+
+A psychologically safe reporting culture contributed to Apollo's engineering reliability.
+
+#### Section B — Predictions
+
+If the claim is true, we expect:
+
+1. Engineers reported anomalies and concerns through formal channels, and these reports were acted upon.
+2. Post-mortem processes were transparent — failure investigations were published and findings were distributed.
+3. Dissenting technical views were documented and considered in design decisions.
+4. The reporting culture improved after the Apollo 1 fire (which revealed gaps in contractor oversight).
+5. Contemporary accounts from programme participants describe a culture of open technical communication.
+
+*Plausible alternative:* Apollo's culture may have been hierarchical and pressure-driven, with psychological safety varying by centre, contractor, and period. The "Phillips Report" — which identified CSM contractor problems but was suppressed from Congressional oversight — suggests limits to transparency. The programme's success may owe more to redundancy and margin than to reporting culture.
+
+#### Section C — Constraints
+
+1. Phillips' review process established formal mechanisms for surfacing technical issues: monthly status reviews, design reviews (PDR, CDR, TRR, FRR), and configuration change boards. [Source: A-S05, Johnson; Appendix 1C]
+2. The "Phillips Report" (1965–66) identified serious quality and schedule problems at North American Aviation (CSM contractor). Phillips recommended the report remain internal to NASA; it was not shared with Congress until after the Apollo 1 fire. This represents a limit on transparency at the programme-political boundary. [Source: A-S02, Brooks et al.; A-S03, Murray & Cox]
+3. After the Apollo 1 fire, NASA replaced contractor self-certification with independent NASA verification — a structural change that increased reporting accountability. [Source: A-P02]
+4. Murray & Cox (1989) describe a culture at MSC (Houston) where engineers were expected to identify and escalate problems. The "champagne-bottle" tradition — engineers toasting after finding a problem during testing — is cited as emblematic of a culture that valued problem-finding over problem-hiding. [Source: A-S03]
+5. During the Apollo 13 crisis, Mission Control's response demonstrated extensive real-time problem-solving with open information sharing among flight controllers, engineers, and contractors. Gene Kranz's "failure is not an option" culture emphasised that all information must be surfaced immediately. [Source: A-S03; A-P03]
+6. Dissenting views were sometimes heard but not always prevailing. John Houbolt's advocacy for LOR was initially resisted by institutional authority (see CL-APOLLO-006). He escalated through unconventional channels (direct letter to Seamans) to have his view considered. [Source: A-S02; A-S07, Seamans]
+7. The contrast with later NASA culture (Challenger, Columbia) is noted by Vaughan (1996) and the CAIB (2003), both of which identify erosion of reporting culture as contributing to those failures. This provides indirect evidence that Apollo-era reporting culture, while imperfect, was stronger than what followed. [Source: Vaughan, *The Challenger Launch Decision*, 1996]
+
+#### Section D — Comparison
+
+Prediction 1: **Partially confirmed.** Formal reporting mechanisms existed and functioned. Anomaly reports were generated and acted upon. However, the Phillips Report suppression shows limits at the political boundary.  
+Prediction 2: **Confirmed post-Apollo 1.** The Review Board report was published. Post-fire, NASA moved to independent verification. The Apollo 13 Review Board report was similarly transparent.  
+Prediction 3: **Partially confirmed.** Houbolt's LOR advocacy eventually prevailed but required unconventional escalation. Dissent was possible but not always easy.  
+Prediction 4: **Confirmed.** The post-fire institutional reforms (independent verification, materials review, contractor oversight) structurally improved reporting accountability.  
+Prediction 5: **Supported with caveats.** Murray & Cox and other retrospective accounts describe strong technical communication culture. But retrospective accounts are subject to survivorship bias and rose-tinted recollection.
+
+**Qualification:** The evidence supports that a reporting culture *existed* and *contributed to* reliability, but the claim that it was "psychologically safe" in the modern organisational-psychology sense is stronger than what the evidence can fully confirm. The culture was more accurately described as *technically rigorous and failure-tolerant within engineering ranks*, with known limits at the political and contractor-management boundaries.
+
+#### Section E — Classification
+
+**UNDERDETERMINED**
+
+The evidence supports that technical reporting culture contributed to engineering reliability, but "psychologically safe" overstates what can be confirmed. The Phillips Report suppression, Houbolt's difficulty, and the retrospective nature of participant accounts introduce sufficient uncertainty. The claim is not inconsistent — but the evidence does not fully resolve whether the culture was genuinely psychologically safe versus technically demanding in a way that happened to produce good outcomes.
+
+**Discriminant Condition:** A systematic study of Apollo-era anomaly reporting rates (comparable to aviation safety reporting databases) would provide stronger evidence. No such study exists.  
+**Feasibility Flag:** SPECULATIVE — the underlying data (informal reporting logs, contractor correspondence) may not survive in accessible archives.
+
+#### Section F — Bibliography
+
+- A-P02: *Report of Apollo 204 Review Board.* NASA. 1967.
+- A-P03: Cortright, E. M. *Report of Apollo 13 Review Board.* NASA. 1970.
+- A-S02: Brooks, C. G. et al. *Chariots for Apollo.* NASA SP-4205. 1979.
+- A-S03: Murray, C. & Cox, C. B. *Apollo: The Race to the Moon.* Simon & Schuster, 1989.
+- A-S05: Johnson, S. B. *The Secret of Apollo.* Johns Hopkins UP, 2002.
+- A-S07: Seamans, R. C. *Project Apollo: The Tough Decisions.* NASA SP-2005-4537. 2005.
+- Vaughan, D. *The Challenger Launch Decision.* University of Chicago Press, 1996.
+
+---
+
+### CL-APOLLO-011 — Management Innovation Legacy
+
+**Entry ID:** CL-APOLLO-011  
+**Global ID:** CL-2026-013  
+**Selection Mode:** REQUEST  
+**Domain:** Organisational history, systems engineering  
+**Scope:** Whether Apollo's management innovations (systems engineering, matrix organisation, configuration control) influenced subsequent large-scale systems engineering practice. At least one non-NASA domain required for comparison.  
+**Op. Fidelity:** Moderate — influence claims require tracing adoption pathways, which are often indirect.
+
+#### Section A — Claim
+
+Apollo's management innovations (systems engineering, matrix organisation, configuration control) influenced subsequent large-scale systems engineering practice.
+
+#### Section B — Predictions
+
+If the claim is true, we expect:
+
+1. Specific Apollo management practices (configuration control, design reviews, matrix organisation) were adopted by non-NASA organisations.
+2. Systems engineering literature cites Apollo as a formative case study.
+3. Apollo programme alumni carried practices to other domains.
+4. At least one non-aerospace domain adopted Apollo-derived management practices.
+
+*Plausible alternative (G-6):* Systems engineering practices were developing independently in multiple domains (defence, telecommunications, construction) during the 1960s. Apollo may have been a parallel instantiation rather than a source of influence. The DoD's MIL-STD-499 (systems engineering standard, 1969) was developed contemporaneously with Apollo, not derived from it.
+
+#### Section C — Constraints
+
+1. Johnson (2002) argues that Apollo was the "crucible" in which modern systems engineering management was forged, specifically: configuration management, formal design reviews (PDR, CDR), interface control documents, and earned value management. [Source: A-S05]
+2. MIL-STD-499 (Military Standard for Systems Engineering, 1969) was issued contemporaneously. Johnson notes cross-pollination between NASA and DoD practices, particularly through personnel who moved between agencies. [Source: A-S05]
+3. Ramo (1988) describes how TRW — where Simon Ramo developed early systems engineering concepts for ICBM programmes — applied similar practices to Apollo and then to commercial telecommunications and energy systems. [Source: X-01]
+4. The International Council on Systems Engineering (INCOSE), founded 1990, explicitly acknowledges aerospace programme management (including Apollo) as foundational to the discipline. [Source: INCOSE Systems Engineering Handbook]
+5. Apollo programme alumni moved into leadership roles across aerospace, defence, energy, and technology sectors. Samuel Phillips became commander of the USAF Space and Missile Systems Organization. George Low became president of Rensselaer Polytechnic Institute. [Source: A-S05; A-S03]
+6. Configuration management practices developed for Apollo (specification control, change control boards, deviation/waiver processes) became standard in defence procurement (MIL-STD-973, later EIA-649) and were adopted in IT/software development (CMMI, ITIL). [Source: A-S05; EIA-649]
+7. The matrix organisation structure — while predating Apollo — was scaled and refined during the programme. Matrix management subsequently became standard in large engineering organisations. [Source: A-S05]
+
+#### Section D — Comparison
+
+Prediction 1: **Confirmed.** Configuration management, design reviews, and matrix organisation were adopted in defence, aerospace, and eventually IT.  
+Prediction 2: **Confirmed.** Johnson (2002) and Ramo (1988) are explicit. INCOSE acknowledges the lineage.  
+Prediction 3: **Confirmed.** Phillips, Low, and others carried practices to non-NASA organisations.  
+Prediction 4: **Confirmed.** Configuration management standards (EIA-649) and earned value management are used in construction, IT, and energy — non-aerospace domains.
+
+**Qualification:** The plausible alternative has merit — systems engineering was co-evolving in multiple domains. Apollo was not the sole origin, but it was a highly visible and well-documented instantiation that accelerated adoption. The influence claim is "contributed to" and "influenced," not "solely invented."
+
+#### Section E — Classification
+
+**COMPATIBLE**
+
+The evidence supports that Apollo management innovations influenced subsequent practice, with the qualification that Apollo was part of a broader co-evolution in systems engineering rather than its sole origin.
+
+#### Section F — Bibliography
+
+- A-S03: Murray, C. & Cox, C. B. *Apollo: The Race to the Moon.* Simon & Schuster, 1989.
+- A-S05: Johnson, S. B. *The Secret of Apollo.* Johns Hopkins UP, 2002.
+- X-01: Ramo, S. *The Business of Science.* Hill & Wang, 1988.
+- INCOSE. *Systems Engineering Handbook.* 4th ed. 2015.
+
+---
+
+### CL-APOLLO-012 — Cancellation Drivers
+
+**Entry ID:** CL-APOLLO-012  
+**Global ID:** CL-2026-014  
+**Selection Mode:** REQUEST  
+**Domain:** Political history, programme management  
+**Scope:** Whether the cancellation of Apollo 18–20 was driven by budget and political factors, not technical failure.  
+**Op. Fidelity:** High — the cancellation is well documented in Congressional records and NASA budget history.
+
+#### Section A — Claim
+
+The cancellation of Apollo 18–20 was driven by budget and political factors, not technical failure.
+
+#### Section B — Predictions
+
+If the claim is true, we expect:
+
+1. No technical failure or safety concern was cited as the reason for cancellation.
+2. Budget reductions preceded the cancellation decision.
+3. Political support for Apollo had declined by the time of cancellation.
+4. The hardware for Apollo 18–20 existed or was in production (i.e., the programme was technically capable of continuing).
+
+*Plausible alternative:* The cancellation could have been partly driven by risk aversion after Apollo 13, or by a technical assessment that diminishing scientific returns did not justify continued risk to crew.
+
+#### Section C — Constraints
+
+1. NASA announced the cancellation of Apollo 20 in January 1970, redirecting its Saturn V to launch the Skylab space station. Apollo 18 and 19 were cancelled in September 1970. [Source: A-P01; A-S02]
+2. NASA's budget declined from a peak of $5.9 billion in FY 1966 to $3.3 billion in FY 1970 and continued declining. Congress appropriated less than requested in each year from FY 1967 onwards. [Source: A-P06; Appendix 1D]
+3. Public interest in Apollo declined sharply after Apollo 11. Television ratings for Apollo 13's pre-accident broadcasts were notably low. Gallup polling showed majority public opposition to continuing Apollo spending by 1970. [Source: A-S01, Logsdon]
+4. The Nixon administration's Space Task Group (1969) recommended a post-Apollo programme including a space station and shuttle, implicitly deprioritising further lunar missions. [Source: A-S01]
+5. Saturn V vehicles SA-513, SA-514, and SA-515 were in various stages of production. SA-513 was redirected to Skylab. SA-514 and SA-515 became museum displays. The hardware existed. [Source: A-P01; A-S02]
+6. No technical review or safety assessment recommended cancellation. The Apollo 13 Review Board recommended specific fixes to the oxygen tank system but did not recommend programme termination. [Source: A-P03]
+7. Logsdon notes that the cancellation was driven by "budget pressures and a shift in national priorities" rather than any technical or safety reassessment. [Source: A-S01]
+
+#### Section D — Comparison
+
+Prediction 1: **Confirmed.** No technical failure or safety concern was cited. The Apollo 13 Review Board recommended fixes, not cancellation.  
+Prediction 2: **Confirmed.** Budget peaked in FY 1966 and declined continuously. Congress appropriated less than requested.  
+Prediction 3: **Confirmed.** Public support declined post-Apollo 11. The Nixon administration shifted priorities to the shuttle/station.  
+Prediction 4: **Confirmed.** Saturn V vehicles existed; SA-513 was redirected to Skylab; SA-514 and SA-515 went to museums.
+
+The plausible alternative (risk aversion post-Apollo 13) has some anecdotal support but is not reflected in the formal cancellation rationale. Budget and political factors are the documented drivers.
+
+#### Section E — Classification
+
+**COMPATIBLE**
+
+The cancellation was driven by budget reductions and political priority shifts, not technical failure. The hardware existed and the programme was technically capable of continuing.
+
+#### Section F — Bibliography
+
+- A-P01: NASA. *Apollo Program Summary Report.* JSC-09423. 1975.
+- A-P03: Cortright, E. M. *Report of Apollo 13 Review Board.* NASA. 1970.
+- A-P06: NASA Budget Justification documents, FY 1961–1974.
+- A-S01: Logsdon, J. M. *The Decision to Go to the Moon.* MIT Press, 1970.
+- A-S02: Brooks, C. G. et al. *Chariots for Apollo.* NASA SP-4205. 1979.
+
+---
+
+### CL-APOLLO-013 — Lunar Sample Scientific Value
+
+**Entry ID:** CL-APOLLO-013  
+**Global ID:** CL-2026-015  
+**Selection Mode:** REQUEST  
+**Domain:** Planetary science, historiography  
+**Scope:** Whether Apollo returned approximately 382 kg of lunar samples with lasting scientific value. "Lasting" is scoped as: samples still producing peer-reviewed publications as of 2025. "Approximately 382 kg" reflects the commonly cited aggregate; the ALSJ-precise total is ~381.7 kg.  
+**Op. Fidelity:** High — sample masses are precisely recorded; publication counts are verifiable.
+
+#### Section A — Claim
+
+Apollo returned approximately 382 kg of lunar samples with lasting scientific value.
+
+#### Section B — Predictions
+
+If the claim is true, we expect:
+
+1. The total mass of returned samples is approximately 382 kg (within ±5 kg of the commonly cited figure).
+2. Samples have been continuously studied since their return in 1969–1972.
+3. Peer-reviewed publications based on Apollo samples were still being produced as of 2025.
+4. Scientific discoveries from the samples have had lasting impact on planetary science.
+
+#### Section C — Constraints
+
+1. Total sample mass across six landing missions: Apollo 11 (21.55 kg) + Apollo 12 (34.35 kg) + Apollo 14 (42.28 kg) + Apollo 15 (77.31 kg) + Apollo 16 (95.71 kg) + Apollo 17 (110.52 kg) = ~381.7 kg. [Source: A-P01; ALSJ]
+2. The commonly cited figure of "382 kg" appears in NASA summaries. The ALSJ-precise total is ~381.7 kg. The difference is within the scope's tolerance (±5 kg). [Source: A-P01; ALSJ]
+3. NASA's Astromaterials Research and Exploration Science (ARES) division at Johnson Space Center continues to curate Apollo samples. As of 2024, approximately 85% of samples remain unexamined. [Source: NASA ARES]
+4. In 2019, NASA opened previously sealed Apollo 17 samples (ANGSA programme) for study with modern analytical techniques not available in the 1970s. This produced multiple peer-reviewed publications in 2020–2024. [Source: *Nature Geoscience*, *Geochimica et Cosmochimica Acta*, various 2020–2024]
+5. Apollo samples established the Giant Impact Hypothesis for lunar origin, the lunar magma ocean theory, and the Late Heavy Bombardment model. These remain foundational in planetary science. [Source: A-S04, Mindell; *Reviews in Mineralogy and Geochemistry*, Vol. 60]
+6. Chang'e 5 samples (returned 2020) were directly compared to Apollo samples in multiple publications, demonstrating continued relevance of the Apollo collection as a reference dataset. [Source: *Science*, Li et al. 2021]
+
+#### Section D — Comparison
+
+Prediction 1: **Confirmed.** ALSJ-precise total is ~381.7 kg; the "~382 kg" claim is accurate within the stated tolerance.  
+Prediction 2: **Confirmed.** Continuous study since 1969; ARES curation ongoing; ~85% of samples still unexamined.  
+Prediction 3: **Confirmed.** The ANGSA programme (opened 2019) produced publications through 2024. Chang'e 5 comparative studies continue.  
+Prediction 4: **Confirmed.** Giant Impact Hypothesis, lunar magma ocean, and Late Heavy Bombardment are foundational planetary science concepts derived from Apollo samples.
+
+#### Section E — Classification
+
+**COMPATIBLE**
+
+The claim is supported on both the mass figure (~381.7 kg ≈ "approximately 382 kg") and the lasting scientific value criterion (continuous publication output through 2025, foundational discoveries, ongoing curation, and use as reference dataset for new lunar sample missions).
+
+#### Section F — Bibliography
+
+- A-P01: NASA. *Apollo Program Summary Report.* JSC-09423. 1975.
+- Apollo Lunar Surface Journal (ALSJ) — sample masses.
+- NASA ARES: Astromaterials Research and Exploration Science Division, JSC.
+- Li, C. et al. "Characteristics of the lunar samples returned by Chang'e-5 mission." *National Science Review*, 2022.
+- *Reviews in Mineralogy and Geochemistry*, Vol. 60: *New Views of the Moon*. 2006.
 
 ---
 
