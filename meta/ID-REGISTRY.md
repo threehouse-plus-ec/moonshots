@@ -19,9 +19,9 @@
 
 | Local Alias | Global ID | Short Title | Status |
 |-------------|-----------|-------------|--------|
-| CL-APOLLO-001 | CL-2026-003 | Programme objective achievement | PENDING |
-| CL-APOLLO-002 | CL-2026-004 | Budget adherence | PENDING |
-| CL-APOLLO-003 | CL-2026-005 | Six successful landings | PENDING |
+| CL-APOLLO-001 | CL-2026-003 | Programme objective achievement | DRAFT |
+| CL-APOLLO-002 | CL-2026-004 | Budget adherence | DRAFT |
+| CL-APOLLO-003 | CL-2026-005 | Six successful landings | DRAFT |
 | CL-APOLLO-004 | CL-2026-006 | All-up testing strategy | PENDING |
 | CL-APOLLO-005 | CL-2026-007 | Five-box management structure | PENDING |
 | CL-APOLLO-006 | CL-2026-008 | Lunar Orbit Rendezvous optimality | PENDING |
