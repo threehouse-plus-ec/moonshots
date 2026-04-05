@@ -3,9 +3,13 @@
 **Subtitle:** Error-Correction Architectures in Lunar Exploration  
 **Document:** `essays/two-returns.md`  
 **Epistemic Layer:** Sails  
-**Version:** v1.1.0  
+**Version:** v1.2.0  
 **Date:** 2026-04-05  
-**Status:** REVISED — Guardian review integrated  
+**Status:** REVISED — Open Questions appendix added; SWARM aside tightened  
+
+## Endorsement Marker
+
+Local candidate framework. This essay interprets the Breakwater dossiers; it does not extend their evidentiary claims.
 
 ---
 
@@ -192,7 +196,7 @@ These are not just engineering choices. They are epistemic positions — each pr
 
 Apollo's answer was: build a system that ensures you *do* know. Mueller's five-box structure was a knowledge machine — it assumed that with enough process, enough reviews, enough configuration control, the unknown unknowns could be converted to known unknowns and then resolved. This worked spectacularly for a programme of bounded scope (land and return) and bounded duration (before decade's end). It could not adapt when the scope changed (sustained presence) or the budget disappeared.
 
-The dossiers underlying this essay were partly compiled through a multi-agent data-collection experiment (six AI agents, identical task cards, five evaluation dimensions — methodology and results in [`meta/SWARM-ASSESSMENT.md`](meta/SWARM-ASSESSMENT.md)). One agent refused to populate fields it could not verify, producing ~200 `[VERIFY]` markers instead of plausible data. By volume it was the weakest output; by epistemic honesty it was the strongest. The system that knows what it doesn't know is safer than the system that doesn't know what it doesn't know — and this maps directly onto the aerospace pattern. Apollo's post-fire reforms moved toward that principle. Artemis's optimistic baseline schedules, which required repeated revision, are the programmatic equivalent of filling in a field you cannot verify.
+The dossiers underlying this essay were partly compiled through a multi-agent data-collection experiment (six AI agents, identical task cards, five evaluation dimensions — methodology and results in [`meta/SWARM-ASSESSMENT.md`](https://github.com/threehouse-plus-ec/moonshots/blob/main/meta/SWARM-ASSESSMENT.md)). One agent refused to populate fields it could not verify, producing ~200 `[VERIFY]` markers instead of plausible data. By volume it was the weakest output; by epistemic honesty it was the strongest. The system that knows what it doesn't know is safer than the system that doesn't know what it doesn't know — a principle that echoes the epistemic trade-off visible in the aerospace programmes above. Apollo's post-fire reforms moved toward it. Artemis's optimistic baseline schedules, which required repeated revision, are the programmatic equivalent of filling in a field you cannot verify.
 
 ---
 
@@ -205,3 +209,19 @@ None of these is wrong. Each works within its constraints. The error — the one
 The dossiers measure. This essay interprets. The measurement says: five programmes, five architectures, five distinct patterns of success and failure. The interpretation says: the quality that this survey suggests may matter most is not the architecture itself but its capacity for self-correction — the ability to detect when your current position on the axis is wrong, and to move. The governance-horizon hypothesis (Section VII) offers one testable mechanism — that political time-horizons constrain where on the axis a programme *can* sit — but it remains a hypothesis, not a finding. Whether self-correction capacity is truly decisive, or merely the variable most visible from five cases, is a question this essay raises but cannot answer.
 
 That capacity — to hold one's own assumptions open to revision under evidence — is what governance frameworks attempt to formalise. It is also the subject of the reflexive notes that follow.
+
+---
+
+## X. Open Questions
+
+These questions mark where the essay's analysis stops and further evidence would be required.
+
+**1. Inter-programme intelligence as error-correction input.** To what extent did US intelligence on Soviet capabilities function as an error-correction input for Apollo's schedule and risk decisions (see Section II)? If NASA knew by 1967 that the N1 was in serious trouble, the competitive pressure justifying sprint integration was partly informed by covert knowledge. How should the framework account for inter-programme knowledge transfer — overt and covert — as a distinct error-correction channel? Declassified intelligence assessments cross-referenced with Apollo programme decisions would bear on this.
+
+**2. Chang'e disclosure and the 6/6 record.** Does the phased-validation interpretation (see Section IV) survive scrutiny under a more open disclosure environment, or is the 100% record partly an artefact of state-controlled information? This is not answerable from outside, but indirect indicators — launch cadence anomalies, satellite imagery, insurance market signals — could bound the question.
+
+**3. ISRO institutional fragility.** Can Chandrayaan's failure-based learning culture survive institutional growth, budget increases, and leadership succession (see Section V)? The no-blame mandate was exercised by a specific leadership cohort. If ISRO scales toward crewed spaceflight, the organisational demands change category — and the essay's own analysis notes that the Luna programme's integration capacity died with Korolev.
+
+**4. Artemis regime-shift test.** What constitutes Artemis's first true regime-shift failure — one severe enough to force movement along the axis rather than simplification (see Section VI)? The Gateway cancellation demonstrated capacity for simplification, not for tightening. A Starship HLS test failure, a crew-safety finding, or a partner withdrawal would test a different response mode.
+
+**5. Governance horizon as predictor.** The governance-horizon hypothesis (see Section VII) predicts that political time-horizons constrain axis position. Future lunar programmes — South Korea, Japan, ESA, or commercial actors with no state governance horizon — offer natural test cases. A commercial programme with no fixed political deadline that nonetheless adopted extreme-integration or extreme-exploration architecture would challenge the hypothesis.
