@@ -144,5 +144,14 @@ convert_md \
   "Error-Correction Architectures in Lunar Exploration" \
   "$DOCS_DIR/five-paths.html"
 
+# --- Framework ---
+
+convert_md \
+  "$REPO_ROOT/frameworks/error-correction-lunar.md" \
+  "Error-Correction Framework" \
+  "Coastline Candidate · Formalised Framework" \
+  "Integration–Exploration Axis · Lunar Programmes" \
+  "$DOCS_DIR/framework.html"
+
 echo ""
 echo "Done. Output in docs/"

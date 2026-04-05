@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error-Correction Framework — Moonshot Dossiers</title>
+  <link rel="icon" type="image/svg+xml" href="emblem-16.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="tokens.css">
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--parchment);
+      color: var(--ink);
+    }
+
+    body {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      line-height: 1.68;
+      background-image:
+        linear-gradient(to right, rgba(31, 34, 40, 0.35) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(31, 34, 40, 0.35) 1px, transparent 1px);
+      background-size: 3rem 3rem;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        font-size: 16px;
+      }
+    }
+
+    a {
+      color: var(--sea);
+      text-decoration-color: var(--grid);
+    }
+
+    a:hover {
+      text-decoration-color: var(--sea);
+    }
+
+    a,
+    button,
+    [role="button"],
+    input,
+    select,
+    textarea {
+      min-height: var(--min-target-aa);
+    }
+
+    :focus-visible {
+      outline: var(--focus-ring);
+      outline-offset: var(--focus-offset);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(1.1rem);
+        animation: rise 720ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      }
+
+      .reveal-delay-1 {
+        animation-delay: 100ms;
+      }
+
+      .reveal-delay-2 {
+        animation-delay: 200ms;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(1.1rem);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      padding: 0.75rem 1.5rem;
+      background: var(--ink);
+      color: var(--parchment);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      z-index: 1000;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    .site-shell {
+      width: min(calc(100% - 3rem), 72rem);
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+      background: rgba(14, 16, 20, 0.88);
+      border-bottom: 1px solid var(--grid);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .site-header {
+        transition: transform 220ms ease;
+      }
+    }
+
+    .site-header.is-hidden {
+      transform: translateY(calc(-100% - 1px));
+    }
+
+    .site-header__inner {
+      width: min(calc(100% - 3rem), 72rem);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 1rem;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .brand-lockup {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      min-height: 44px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-lockup img:first-child {
+      width: 32px;
+      height: 32px;
+      flex: none;
+    }
+
+    .brand-lockup img:last-child {
+      width: 7.05rem;
+      height: auto;
+      flex: none;
+    }
+
+    .site-nav {
+      justify-self: end;
+    }
+
+    .site-nav__list {
+      display: flex;
+      gap: 0.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .site-nav a,
+    .nav-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: var(--min-target);
+      padding: 0.5rem 0.9rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      line-height: 1.3;
+      color: var(--sea);
+      text-decoration: none;
+      border: 1px solid transparent;
+      background: transparent;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus-visible,
+    .nav-toggle:hover,
+    .nav-toggle:focus-visible {
+      border-color: var(--grid);
+      background: rgba(22, 25, 32, 0.88);
+    }
+
+    .site-nav a[aria-current="page"] {
+      color: var(--ink);
+      border-color: var(--grid);
+    }
+
+    .nav-toggle {
+      display: none;
+      cursor: pointer;
+      justify-self: end;
+    }
+
+    main {
+      display: block;
+      padding: 0 0 4rem;
+    }
+
+    /* --- Page header for sub-pages --- */
+
+    .page-header {
+      padding: 4rem 0 2rem;
+    }
+
+    .page-header .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      line-height: 1.3;
+      color: var(--sea);
+      margin: 0 0 0.6rem;
+    }
+
+    .page-header h1 {
+      margin: 0;
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.06;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    .page-header .page-meta {
+      margin-top: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      line-height: 1.5;
+      color: var(--stone);
+    }
+
+    .page-header .page-meta span + span::before {
+      content: " · ";
+    }
+
+    /* --- Markdown content area --- */
+
+    .md-content {
+      padding-top: 1rem;
+    }
+
+    .md-content h1 {
+      display: none; /* Title already in page-header */
+    }
+
+    .md-content h2 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      line-height: 1.12;
+      font-weight: 400;
+      margin: 3rem 0 0.8rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--grid);
+    }
+
+    .md-content h3 {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      line-height: 1.3;
+      font-weight: 500;
+      color: var(--sea);
+      margin: 2rem 0 0.5rem;
+    }
+
+    .md-content h4 {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      line-height: 1.3;
+      font-weight: 500;
+      color: var(--stone);
+      margin: 1.5rem 0 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .md-content p {
+      max-width: var(--measure);
+      margin: 0 0 0.85rem;
+    }
+
+    .md-content ul,
+    .md-content ol {
+      max-width: var(--measure);
+      padding-left: 1.4rem;
+      margin: 0 0 0.85rem;
+    }
+
+    .md-content li {
+      margin-bottom: 0.3rem;
+    }
+
+    .md-content li p {
+      margin: 0;
+    }
+
+    .md-content strong {
+      font-weight: 600;
+    }
+
+    .md-content em {
+      font-style: italic;
+    }
+
+    .md-content code {
+      font-family: var(--font-mono);
+      font-size: 0.82em;
+      background: var(--warm-white);
+      border: 1px solid var(--grid);
+      padding: 0.1em 0.35em;
+      border-radius: 2px;
+    }
+
+    .md-content pre {
+      background: var(--warm-white);
+      border: 1px solid var(--grid);
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 0 0 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+
+    .md-content pre code {
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .md-content blockquote {
+      margin: 1.2rem 0;
+      padding: 0.8rem 1.2rem;
+      border-left: 3px solid var(--sea);
+      background: rgba(22, 25, 32, 0.92);
+      font-style: italic;
+    }
+
+    .md-content blockquote p {
+      margin: 0;
+    }
+
+    .md-content hr {
+      width: 1.5rem;
+      height: 1px;
+      margin: 2rem 0 1.2rem;
+      border: 0;
+      background: var(--grid);
+    }
+
+    /* --- Tables in markdown --- */
+
+    .md-content table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      font-variant-numeric: tabular-nums;
+      margin: 1.2rem 0;
+    }
+
+    .md-content thead th {
+      font-family: var(--font-mono);
+      font-weight: 500;
+      font-size: 0.75rem;
+      line-height: 1.3;
+      color: var(--ink);
+      text-align: left;
+      padding: 0.55rem 0.75rem;
+      border-bottom: 1px solid var(--stone);
+      vertical-align: bottom;
+    }
+
+    .md-content tbody td {
+      font-family: var(--font-serif);
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: var(--ink);
+      padding: 0.55rem 0.75rem;
+      border-bottom: 1px solid var(--grid);
+      vertical-align: top;
+    }
+
+    @media (hover: hover) {
+      .md-content tbody tr:hover {
+        background: var(--warm-white);
+      }
+    }
+
+    /* --- Task list checkboxes --- */
+
+    .md-content input[type="checkbox"] {
+      margin-right: 0.4rem;
+      accent-color: var(--sea);
+    }
+
+    /* --- Colophon --- */
+
+    .colophon {
+      margin-top: 4rem;
+      padding: 1.4rem;
+      background: rgba(22, 25, 32, 0.92);
+      border: 1px solid var(--grid);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .colophon img {
+      width: 4.75rem;
+      height: auto;
+    }
+
+    .colophon p {
+      margin: 0;
+    }
+
+    .colophon .status {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      line-height: 1.3;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+
+    .colophon .maxim {
+      margin-top: 0.45rem;
+      font-style: italic;
+    }
+
+    .colophon .meta {
+      margin-top: 0.7rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      line-height: 1.5;
+      color: var(--stone);
+    }
+
+    @media (max-width: 640px) {
+      .site-shell,
+      .site-header__inner {
+        width: min(calc(100% - 2.5rem), 72rem);
+      }
+
+      .site-header__inner {
+        padding: 0.7rem 0;
+        grid-template-columns: auto auto;
+      }
+
+      .site-nav {
+        grid-column: 1 / -1;
+        justify-self: stretch;
+      }
+
+      .site-nav[data-open="false"] {
+        display: none;
+      }
+
+      .site-nav__list {
+        flex-direction: column;
+        gap: 0.35rem;
+        padding-top: 0.4rem;
+      }
+
+      .site-nav a {
+        justify-content: flex-start;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .page-header {
+        padding-top: 2.5rem;
+      }
+
+      .colophon {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#content" class="skip-link">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand-lockup" href="index.html" aria-label="Moonshot Dossiers home">
+        <img src="emblem-64.svg" alt="T(h)reehouse +EC emblem">
+        <img src="wordmark-full.svg" alt="T[h]ree +EC wordmark">
+      </a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Toggle navigation"
+      >
+        Menu
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary" data-open="true">
+        <ul class="site-nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="apollo.html">Apollo</a></li>
+          <li><a href="artemis.html">Artemis</a></li>
+          <li><a href="luna.html">Luna</a></li>
+          <li><a href="change.html">Chang'e</a></li>
+          <li><a href="chandrayaan.html">Chandrayaan</a></li>
+          <li><a href="five-paths.html">Essay</a></li>
+          <li><a href="framework.html">Framework</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="site-shell">
+      <div class="page-header reveal">
+        <p class="eyebrow">Coastline Candidate · Formalised Framework</p>
+        <h1>Error-Correction Framework</h1>
+        <div class="page-meta">
+          <span>Integration–Exploration Axis · Lunar Programmes</span>
+        </div>
+      </div>
+
+      <article class="md-content reveal reveal-delay-1">
+<h1
+id="error-correction-architecture-framework--lunar-exploration-programmes">Error-Correction
+Architecture Framework — Lunar Exploration Programmes</h1>
+<p><strong>Document:</strong>
+<code>frameworks/error-correction-lunar.md</code><br />
+<strong>Epistemic Layer:</strong> Coastline candidate<br />
+<strong>Version:</strong> v1.0.0<br />
+<strong>Date:</strong> 2026-04-05<br />
+<strong>Source:</strong> <code>essays/two-returns.md</code> v1.4.0<br />
+<strong>Status:</strong> EXTRACTED — formalisation of essay constructs;
+no new claims</p>
+<h2 id="endorsement-marker">Endorsement Marker</h2>
+<p>Local candidate framework, compiled by the author from primary and
+secondary sources. This document formalises constructs already present
+in the companion essay "Five Paths to the Moon." It introduces no new
+claims, evidence, or programmes. All formal elements trace to explicit
+passages in the source essay.</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This document extracts the implicit analytical structure of <em>Five
+Paths to the Moon</em> (v1.4.0) and stabilises it as a minimally formal,
+testable framework. Its function is to make the essay's constructs
+reproducible: an independent reader should be able to score a lunar
+exploration programme using only the definitions below, without
+reference to the essay's narrative.</p>
+<p>The framework does not optimise, extend, or improve the essay's
+argument. It formalises what is already there.</p>
+<hr />
+<h2 id="2-variable-definitions">2. Variable Definitions</h2>
+<p>Six variables are extracted from the essay's Section VII axis table.
+The first five compose the primary integration-exploration axis; the
+sixth (governance horizon) is treated as an independent predictor
+variable.</p>
+<h3 id="21-variable-extraction-table">2.1 Variable Extraction Table</h3>
+<table>
+<thead>
+<tr>
+<th>Variable ID</th>
+<th>Name</th>
+<th>Definition</th>
+<th>Domain</th>
+<th>Scoring rule</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V1</td>
+<td>Central authority</td>
+<td>Degree of directive control exercised by a single programme office
+over all programme elements</td>
+<td>Ordinal: low / medium / high</td>
+<td><strong>High:</strong> single office with directive power over all
+contractors and centres. <strong>Medium:</strong> single office with
+oversight but shared authority (e.g., contract gates without directive
+power). <strong>Low:</strong> multiple autonomous actors with
+independent design authority.</td>
+<td>§VII table, row 1</td>
+</tr>
+<tr>
+<td>V2</td>
+<td>Configuration control</td>
+<td>Formality of change-management processes governing engineering
+modifications</td>
+<td>Ordinal: low / medium / high</td>
+<td><strong>High:</strong> formal change boards, interface control
+documents, gate reviews. <strong>Medium:</strong> documented processes
+but not universally applied. <strong>Low:</strong> informal or
+absent.</td>
+<td>§VII table, row 2</td>
+</tr>
+<tr>
+<td>V3</td>
+<td>Architecture conservatism</td>
+<td>Degree to which the programme flies proven systems versus unproven
+architectures</td>
+<td>Ordinal: low / medium / high</td>
+<td><strong>High:</strong> fly proven systems; extend incrementally from
+demonstrated capability. <strong>Medium:</strong> mix of proven
+subsystems and novel integration. <strong>Low:</strong> fly unproven
+architectures or capabilities not yet demonstrated.</td>
+<td>§VII table, row 3</td>
+</tr>
+<tr>
+<td>V4</td>
+<td>Mission-loss tolerance</td>
+<td>Organisational acceptance of mission failure as an expected
+outcome</td>
+<td>Ordinal: low / medium / high</td>
+<td><strong>High (more exploratory):</strong> failures are expected data
+points; programme continues without systemic review.
+<strong>Medium:</strong> failures trigger review but do not halt
+programme. <strong>Low (more integrated):</strong> every failure
+triggers systemic review and architectural reassessment.</td>
+<td>§VII table, row 4</td>
+</tr>
+<tr>
+<td>V5</td>
+<td>External dependency</td>
+<td>Degree of reliance on actors outside the primary programme
+authority</td>
+<td>Ordinal: low / medium / high</td>
+<td><strong>High (more exploratory):</strong> heavily dependent on
+external partners for critical-path elements. <strong>Medium:</strong>
+some external partners but primary authority retains most critical-path
+control. <strong>Low (more integrated):</strong> vertically integrated;
+few external partners.</td>
+<td>§VII table, row 5</td>
+</tr>
+<tr>
+<td>V6</td>
+<td>Governance horizon</td>
+<td>Political or temporal constraint on programme duration</td>
+<td>Categorical: short / long / distributed</td>
+<td><strong>Short:</strong> fixed deadline or single political
+authoriser with electoral or propaganda time pressure.
+<strong>Long:</strong> multi-decade programme without acute external
+deadline. <strong>Distributed:</strong> no single authoriser; timeline
+set by market or partner convergence.</td>
+<td>§VII table, row 6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-directionality">2.2 Directionality</h3>
+<p>For variables V1–V5, the integration-exploration polarity is:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Higher value →</th>
+<th>Lower value →</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V1 (Central authority)</td>
+<td>More integrated</td>
+<td>More exploratory</td>
+</tr>
+<tr>
+<td>V2 (Configuration control)</td>
+<td>More integrated</td>
+<td>More exploratory</td>
+</tr>
+<tr>
+<td>V3 (Architecture conservatism)</td>
+<td>More integrated</td>
+<td>More exploratory</td>
+</tr>
+<tr>
+<td>V4 (Mission-loss tolerance)</td>
+<td>More exploratory</td>
+<td>More integrated</td>
+</tr>
+<tr>
+<td>V5 (External dependency)</td>
+<td>More exploratory</td>
+<td>More integrated</td>
+</tr>
+</tbody>
+</table>
+<p>Note: V4 and V5 are <em>inverted</em> relative to V1–V3. Higher
+mission-loss tolerance and higher external dependency indicate more
+exploratory architecture.</p>
+<hr />
+<h2 id="3-axis-construction">3. Axis Construction</h2>
+<h3 id="31-primary-axis-integrationexploration-a">3.1 Primary Axis:
+Integration–Exploration (A)</h3>
+<p>The integration-exploration score A is defined as:</p>
+<pre><code>A = (V1_i + V2_i + V3_i + V4_e + V5_e) / 5</code></pre>
+<p>Where:</p>
+<ul>
+<li><code>V1_i, V2_i, V3_i</code> are scored on the integration scale:
+high = 3, medium = 2, low = 1</li>
+<li><code>V4_e, V5_e</code> are scored on the exploration scale: high =
+3, medium = 2, low = 1</li>
+</ul>
+<p>Lower A-scores indicate more integrated architectures; higher
+A-scores indicate more exploratory architectures.</p>
+<p><strong>Aggregation assumption:</strong> Equal weighting across all
+five variables. The essay does not specify differential weighting; equal
+weight is therefore the default. This is an assumption, not a finding —
+future work could test whether some variables are more predictive than
+others.</p>
+<p><strong>Source:</strong> §VII: "Scored qualitatively against the
+first five criteria"</p>
+<h3 id="32-second-dimension-authority-distribution-b">3.2 Second
+Dimension: Authority Distribution (B)</h3>
+<p>The essay explicitly names a candidate second dimension:</p>
+<blockquote>
+<p>"A two-dimensional treatment — integration-exploration ×
+centralised-distributed authority — would place Artemis in the
+distributed-moderate-integration quadrant" (§VII)</p>
+</blockquote>
+<p>This is sufficiently supported to define:</p>
+<pre><code>B = (V1_d + V5_d) / 2</code></pre>
+<p>Where:</p>
+<ul>
+<li><code>V1_d</code> is scored on the distribution scale: high
+(distributed) = 3, medium = 2, low (centralised) = 1</li>
+<li><code>V5_d</code> uses the same scale as V5_e (external dependency
+already measures distribution)</li>
+</ul>
+<p>Lower B-scores indicate centralised authority; higher B-scores
+indicate distributed authority.</p>
+<p><strong>Justification:</strong> The essay states that Artemis "does
+not sit cleanly on this single axis" and proposes the two-dimensional
+treatment as a resolution (§VII). Variables V1 and V5 are the two
+dimensions the essay identifies as placing Artemis differently from the
+primary axis.</p>
+<hr />
+<h2 id="4-programme-scoring-table">4. Programme Scoring Table</h2>
+<p>All scores are assigned using only essay-supported evidence. Ordinal
+bins: low (1), medium (2), high (3).</p>
+<h3 id="41-primary-axis-variables-v1v5">4.1 Primary Axis Variables
+(V1–V5)</h3>
+<table>
+<thead>
+<tr>
+<th>Programme</th>
+<th>V1 Central authority</th>
+<th>V2 Config. control</th>
+<th>V3 Arch. conservatism</th>
+<th>V4 Mission-loss tolerance</th>
+<th>V5 External dependency</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Apollo</strong></td>
+<td>high (3)</td>
+<td>high (3)</td>
+<td>high (3)</td>
+<td>low (1)</td>
+<td>low (1)</td>
+<td>§II: "five-box management structure," "configuration control boards
+gated every engineering change," "all-up testing philosophy" within
+proven Saturn/CSM/LM systems, post-failure systemic reviews (Apollo 1,
+13), vertically integrated NASA-contractor hierarchy</td>
+</tr>
+<tr>
+<td><strong>Luna</strong></td>
+<td>low (1)</td>
+<td>low (1)</td>
+<td>low (1)</td>
+<td>high (3)</td>
+<td>low (1)</td>
+<td>§III: "multiple competing design bureaux," "informal or absent"
+config. control implied by BIUS-L substitution, unproven N1
+architecture, 31% success rate with "each failure was a data point,"
+bureaux were internal to Soviet state</td>
+</tr>
+<tr>
+<td><strong>Chang'e</strong></td>
+<td>high (3)</td>
+<td>high (3)</td>
+<td>high (3)</td>
+<td>low (1)</td>
+<td>low (1)</td>
+<td>§IV: "no phase is attempted before the prior phase succeeds" (gated
+authority), backup-to-primary redesign pattern (formal change
+management), "fly proven systems; extend incrementally" (phased
+validation), 6/6 record implies low tolerance, vertically integrated
+state programme</td>
+</tr>
+<tr>
+<td><strong>Chandrayaan</strong></td>
+<td>medium (2)</td>
+<td>medium (2)</td>
+<td>medium (2)</td>
+<td>medium (2)</td>
+<td>low (1)</td>
+<td>§V: single agency (ISRO) but with design-for-cost constraints
+limiting directive scope, failure-based redesign implies moderate
+formality, mix of proven and adapted systems (LDV added), Vikram crash
+accepted as learning event but triggered systemic redesign, minimal
+external partners</td>
+</tr>
+<tr>
+<td><strong>Artemis</strong></td>
+<td>medium (2)</td>
+<td>medium (2)</td>
+<td>low (1)</td>
+<td>medium (2)</td>
+<td>high (3)</td>
+<td>§VI: "formal NASA oversight, design reviews, contract gates" but no
+directive power over partners, moderate config. control across federated
+boundary, orbital propellant transfer "unproven" (novel architecture),
+schedule slips accepted without programme cancellation, "heavily
+dependent on external actors" (SpaceX, Blue Origin, Axiom, ESA)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-a-score-calculation">4.2 A-Score Calculation</h3>
+<table>
+<thead>
+<tr>
+<th>Programme</th>
+<th>V1_i</th>
+<th>V2_i</th>
+<th>V3_i</th>
+<th>V4_e</th>
+<th>V5_e</th>
+<th>A-score</th>
+<th>Position</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Apollo</strong></td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+<td>1</td>
+<td><strong>2.2</strong></td>
+<td>Most integrated</td>
+</tr>
+<tr>
+<td><strong>Chang'e</strong></td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+<td>1</td>
+<td><strong>2.2</strong></td>
+<td>Most integrated (tied)</td>
+</tr>
+<tr>
+<td><strong>Chandrayaan</strong></td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td><strong>1.8</strong></td>
+<td>Middle</td>
+</tr>
+<tr>
+<td><strong>Luna</strong></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>3</td>
+<td>1</td>
+<td><strong>1.4</strong></td>
+<td>Exploratory</td>
+</tr>
+<tr>
+<td><strong>Artemis</strong></td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td><strong>2.0</strong></td>
+<td>Mixed</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note on scoring direction:</strong> V4 and V5 are scored on
+the exploration scale (high tolerance / high dependency = 3), while
+V1–V3 are scored on the integration scale (high authority / control /
+conservatism = 3). To compute A as a unified integration score, V4_e and
+V5_e are inverted: V4_e = 4 − V4_exploration, V5_e = 4 −
+V5_exploration.</p>
+<p>Corrected calculation:</p>
+<table>
+<thead>
+<tr>
+<th>Programme</th>
+<th>V1_i</th>
+<th>V2_i</th>
+<th>V3_i</th>
+<th>V4_i (inverted)</th>
+<th>V5_i (inverted)</th>
+<th>A-score</th>
+<th>Position</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Apollo</strong></td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td><strong>3.0</strong></td>
+<td>Most integrated</td>
+</tr>
+<tr>
+<td><strong>Chang'e</strong></td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td><strong>3.0</strong></td>
+<td>Most integrated (tied)</td>
+</tr>
+<tr>
+<td><strong>Chandrayaan</strong></td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td><strong>2.2</strong></td>
+<td>Middle</td>
+</tr>
+<tr>
+<td><strong>Artemis</strong></td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td><strong>1.6</strong></td>
+<td>Mixed — see §4.4</td>
+</tr>
+<tr>
+<td><strong>Luna</strong></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>3</td>
+<td><strong>1.4</strong></td>
+<td>Most exploratory</td>
+</tr>
+</tbody>
+</table>
+<p>A-score range: 1.0 (maximally exploratory) to 3.0 (maximally
+integrated).</p>
+<h3 id="43-ordering-validation">4.3 Ordering Validation</h3>
+<p>The essay's qualitative ordering (§VII) is:</p>
+<pre><code>← MORE INTEGRATED                                    MORE EXPLORATORY →
+   Apollo        Chang&#39;e        Chandrayaan       Luna</code></pre>
+<p>The A-scores produce: Apollo/Chang'e (3.0) &gt; Chandrayaan (2.2)
+&gt; Luna (1.4), with Artemis (1.6) between Luna and Chandrayaan.</p>
+<p>Apollo and Chang'e tie. The essay places Apollo slightly more
+integrated than Chang'e but does not provide criteria to distinguish
+them at this resolution. The tie is consistent with the essay's
+observation that "the most integrated programmes (Apollo, Chang'e) have
+the highest mission success rates" (§VII), which groups them.</p>
+<h3 id="44-artemis-placement">4.4 Artemis Placement</h3>
+<p>Artemis scores 1.6 on the primary axis — between Luna and
+Chandrayaan. This diverges from the essay's treatment, which excludes
+Artemis from the linear ordering because it "does not sit cleanly on
+this single axis" (§VII). The divergence confirms the essay's own claim:
+the one-dimensional A-score cannot capture Artemis's structure. The
+second dimension (B) is required.</p>
+<h3 id="45-b-score-calculation-authority-distribution">4.5 B-Score
+Calculation (Authority Distribution)</h3>
+<table>
+<thead>
+<tr>
+<th>Programme</th>
+<th>V1_d (distribution)</th>
+<th>V5_d (external dep.)</th>
+<th>B-score</th>
+<th>Quadrant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Apollo</strong></td>
+<td>1 (centralised)</td>
+<td>1 (low)</td>
+<td><strong>1.0</strong></td>
+<td>Centralised-integrated</td>
+</tr>
+<tr>
+<td><strong>Chang'e</strong></td>
+<td>1 (centralised)</td>
+<td>1 (low)</td>
+<td><strong>1.0</strong></td>
+<td>Centralised-integrated</td>
+</tr>
+<tr>
+<td><strong>Chandrayaan</strong></td>
+<td>2 (moderate)</td>
+<td>1 (low)</td>
+<td><strong>1.5</strong></td>
+<td>Moderate-centralised</td>
+</tr>
+<tr>
+<td><strong>Luna</strong></td>
+<td>3 (distributed)</td>
+<td>1 (low)</td>
+<td><strong>2.0</strong></td>
+<td>Distributed-exploratory</td>
+</tr>
+<tr>
+<td><strong>Artemis</strong></td>
+<td>2 (moderate)</td>
+<td>3 (high)</td>
+<td><strong>2.5</strong></td>
+<td>Distributed-moderate</td>
+</tr>
+</tbody>
+</table>
+<p>Artemis's B-score (2.5) is the highest, placing it in the
+distributed-moderate quadrant — matching the essay's prediction: "A
+two-dimensional treatment … would place Artemis in the
+distributed-moderate-integration quadrant" (§VII).</p>
+<h3 id="46-two-dimensional-map">4.6 Two-Dimensional Map</h3>
+<pre><code>           B (Authority Distribution)
+           3 ┌─────────────────────────────┐
+             │                             │
+  Distributed│         Luna (1.4, 2.0)     │
+             │              Artemis (1.6,  │
+           2 │                       2.5)  │
+             │                             │
+    Moderate │     Chandrayaan (2.2, 1.5)  │
+             │                             │
+           1 │  Apollo (3.0, 1.0)          │
+  Centralised│  Chang&#39;e (3.0, 1.0)         │
+             └─────────────────────────────┘
+             1          2          3
+             ← Integrated    Exploratory →
+                      A (Primary Axis)</code></pre>
+<h3 id="47-governance-horizon-v6">4.7 Governance Horizon (V6)</h3>
+<table>
+<thead>
+<tr>
+<th>Programme</th>
+<th>V6</th>
+<th>Classification</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Apollo</strong></td>
+<td>Short</td>
+<td>Fixed deadline (before decade's end), single political authoriser
+(President/Congress)</td>
+<td>§II: "Kennedy's deadline created a fixed political horizon of
+roughly eight years"</td>
+</tr>
+<tr>
+<td><strong>Luna</strong></td>
+<td>Short</td>
+<td>Propaganda-driven, competitive-first imperative</td>
+<td>§III: "Khrushchev's management-by-rivalry rewarded firsts —
+propaganda value — over reliability"</td>
+</tr>
+<tr>
+<td><strong>Chang'e</strong></td>
+<td>Long</td>
+<td>Multi-decade programme, no election-cycle pressure</td>
+<td>§IV: "single-party long-horizon governance that eliminates
+election-cycle pressure"</td>
+</tr>
+<tr>
+<td><strong>Chandrayaan</strong></td>
+<td>Long</td>
+<td>Democratic but not deadline-driven; budget-constrained rather than
+time-constrained</td>
+<td>§V: no fixed deadline mentioned; constraint is fiscal, not
+temporal</td>
+</tr>
+<tr>
+<td><strong>Artemis</strong></td>
+<td>Distributed</td>
+<td>No single authoriser; timeline set by partner convergence</td>
+<td>§VI: "the programme's schedule is determined by the slowest
+critical-path element"</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-mobility-concept">5. Mobility Concept</h2>
+<h3 id="51-definition">5.1 Definition</h3>
+<p>The essay's central insight is not static axis position but capacity
+for movement:</p>
+<blockquote>
+<p>"The critical insight is not where a programme sits on the axis at
+any given moment, but whether it can <em>move</em> along the axis when
+its current position proves wrong." (§VII)</p>
+</blockquote>
+<p><strong>Mobility (M)</strong> is defined as:</p>
+<pre><code>M = ΔA after a regime-significant failure event</code></pre>
+<p>Where ΔA is the change in A-score between the pre-failure and
+post-failure architectural state of the programme.</p>
+<h3 id="52-observed-mobility-events">5.2 Observed Mobility Events</h3>
+<table>
+<thead>
+<tr>
+<th>Programme</th>
+<th>Failure event</th>
+<th>Direction</th>
+<th>ΔA estimate</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Apollo</strong></td>
+<td>Apollo 1 fire (1967)</td>
+<td>Toward integration (+)</td>
+<td>Positive (tightened: independent verification, materials control,
+contractor oversight reform)</td>
+<td>§II, §VII</td>
+</tr>
+<tr>
+<td><strong>Apollo</strong></td>
+<td>Apollo 13 (1970)</td>
+<td>Toward integration (+)</td>
+<td>Positive (faster, more focused — "organisation learning how to
+learn")</td>
+<td>§II</td>
+</tr>
+<tr>
+<td><strong>Chandrayaan</strong></td>
+<td>Vikram crash (2019)</td>
+<td>Toward integration (+)</td>
+<td>Positive (failure-based design, additional sensors, expanded
+margins)</td>
+<td>§V, §VII</td>
+</tr>
+<tr>
+<td><strong>Artemis</strong></td>
+<td>Gateway cancellation (2026)</td>
+<td>Away from integration (−)</td>
+<td>Negative (simplification, not tightening)</td>
+<td>§VI, §VII</td>
+</tr>
+<tr>
+<td><strong>Luna/N1</strong></td>
+<td>N1 test failures (1969–72)</td>
+<td>None (failed to move)</td>
+<td>Zero — "the Soviet programme <em>failed to move</em> toward
+integration for the N1, and the programme died"</td>
+<td>§III, §VII</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-mobility-types">5.3 Mobility Types</h3>
+<p>The essay distinguishes two forms of adaptive movement:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tightening</strong></td>
+<td>Moving toward integration in response to failure (adding controls,
+verification, oversight)</td>
+<td>Apollo post-fire, Chandrayaan post-Vikram</td>
+<td>§VII</td>
+</tr>
+<tr>
+<td><strong>Simplification</strong></td>
+<td>Moving away from integration by removing architectural elements</td>
+<td>Artemis Gateway cancellation</td>
+<td>§VII</td>
+</tr>
+</tbody>
+</table>
+<p>The essay notes that Artemis has demonstrated simplification but
+"whether the programme can also tighten when required remains untested"
+(§VII). A complete mobility assessment requires observation of both
+types.</p>
+<hr />
+<h2 id="6-discriminant-condition-falsifiability">6. Discriminant
+Condition (Falsifiability)</h2>
+<h3 id="61-hypothesis-statement">6.1 Hypothesis Statement</h3>
+<p>Extracted from §VII (Discriminant condition):</p>
+<blockquote>
+<p>Programmes operating under shorter political horizons cluster at the
+extremes of the integration-exploration axis; programmes with longer or
+less constrained horizons occupy the middle range.</p>
+</blockquote>
+<p>Formalised:</p>
+<pre><code>If V6 = short → A tends toward extremes (A ≥ 2.8 or A ≤ 1.4)
+If V6 = long  → A tends toward intermediate values (1.6 ≤ A ≤ 2.6)</code></pre>
+<h3 id="62-current-evidence">6.2 Current Evidence</h3>
+<table>
+<thead>
+<tr>
+<th>Programme</th>
+<th>V6</th>
+<th>A-score</th>
+<th>Prediction</th>
+<th>Observed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apollo</td>
+<td>Short</td>
+<td>3.0</td>
+<td>Extreme</td>
+<td>Extreme (integrated) — <strong>consistent</strong></td>
+</tr>
+<tr>
+<td>Luna</td>
+<td>Short</td>
+<td>1.4</td>
+<td>Extreme</td>
+<td>Extreme (exploratory) — <strong>consistent</strong></td>
+</tr>
+<tr>
+<td>Chang'e</td>
+<td>Long</td>
+<td>3.0</td>
+<td>Intermediate</td>
+<td>Extreme (integrated) — <strong>inconsistent</strong></td>
+</tr>
+<tr>
+<td>Chandrayaan</td>
+<td>Long</td>
+<td>2.2</td>
+<td>Intermediate</td>
+<td>Intermediate — <strong>consistent</strong></td>
+</tr>
+<tr>
+<td>Artemis</td>
+<td>Distributed</td>
+<td>1.6</td>
+<td>(no prediction)</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="63-scoring-anomaly-change">6.3 Scoring Anomaly: Chang'e</h3>
+<p>Chang'e scores 3.0 (maximally integrated) on the A-score, placing it
+at the extreme — which is <em>inconsistent</em> with the
+governance-horizon prediction. However, the essay places Chang'e in the
+middle of its qualitative ordering, between Apollo and Chandrayaan
+(§VII). This discrepancy arises because the equal-weighted scoring
+formula cannot distinguish between Apollo's integration (driven by
+schedule pressure) and Chang'e's integration (driven by risk
+minimisation under long horizons). The essay's qualitative ordering
+captures a difference — Chang'e's integration is <em>patient</em> rather
+than <em>urgent</em> — that the current variable set does not
+measure.</p>
+<p>This is a known limitation of the framework's resolution. A seventh
+variable — <strong>integration urgency</strong> (schedule-driven vs.
+risk-driven) — would resolve it but is not explicitly defined in the
+essay and therefore cannot be introduced here. The anomaly is flagged
+for future work.</p>
+<h3 id="64-falsification-conditions">6.4 Falsification Conditions</h3>
+<p>The prediction would be <strong>disconfirmed</strong> by either:</p>
+<ol type="1">
+<li>A programme with a short, fixed political horizon that adopted and
+sustained a phased-validation architecture (middle of the axis) without
+collapsing toward one extreme under schedule pressure.</li>
+<li>A long-horizon programme that exhibited extreme integration or
+extreme exploration without evident schedule pressure.</li>
+</ol>
+<p><strong>Source:</strong> §VII, discriminant condition subsection.</p>
+<h3 id="65-candidate-test-cases">6.5 Candidate Test Cases</h3>
+<p>Named in the essay (§X, Open Question 5):</p>
+<ul>
+<li>South Korea (KSLV-III)</li>
+<li>Japan (SLIM follow-on)</li>
+<li>ESA contributions</li>
+<li>Commercial actors (ispace, Astrobotic) — with no state governance
+horizon</li>
+</ul>
+<hr />
+<h2 id="7-boundary-conditions">7. Boundary Conditions</h2>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset size</td>
+<td>N = 5</td>
+<td>§I</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>Lunar exploration programmes</td>
+<td>§I</td>
+</tr>
+<tr>
+<td>Temporal range</td>
+<td>1958–2026</td>
+<td>§I</td>
+</tr>
+<tr>
+<td>Programme types included</td>
+<td>Robotic and crewed</td>
+<td>§I–§VI</td>
+</tr>
+<tr>
+<td>Historiographic maturity</td>
+<td>Varies: 60 years (Apollo, Luna) to live programme (Artemis)</td>
+<td>§I</td>
+</tr>
+<tr>
+<td>Archival access</td>
+<td>Varies: declassified (Apollo, Luna), state-controlled (Chang'e),
+contemporaneous (Chandrayaan, Artemis)</td>
+<td>§I</td>
+</tr>
+<tr>
+<td>Evidentiary base</td>
+<td>Author-curated Breakwater dossiers, not independently
+peer-reviewed</td>
+<td>§X, Limitations</td>
+</tr>
+</tbody>
+</table>
+<h3 id="71-non-controlled-variables">7.1 Non-Controlled Variables</h3>
+<p>The following variables differ across the five programmes but are not
+controlled for in the framework:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Technological era</td>
+<td>Programmes span 1958–2026; available technology differs
+markedly</td>
+<td>§I (temporal range)</td>
+</tr>
+<tr>
+<td>Mission type</td>
+<td>Robotic vs. crewed programmes face different risk profiles</td>
+<td>§III (Luna's robotic success vs. N1 crewed failure)</td>
+</tr>
+<tr>
+<td>Industrial base</td>
+<td>National industrial capability and supply chains vary</td>
+<td>§III (Soviet supply-chain fragility), §V (ISRO budget
+constraints)</td>
+</tr>
+<tr>
+<td>Disclosure environment</td>
+<td>State-controlled vs. open archival access affects observable
+evidence</td>
+<td>§IV (Chang'e disclosure caveat), §I (archival access)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-known-failure-modes">8. Known Failure Modes</h2>
+<table>
+<thead>
+<tr>
+<th>Failure mode</th>
+<th>Description</th>
+<th>Source section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artemis axis misfit</td>
+<td>Artemis does not sit cleanly on the one-dimensional
+integration-exploration axis; the A-score places it between Luna and
+Chandrayaan, but its federated structure is qualitatively distinct from
+both</td>
+<td>§VII</td>
+</tr>
+<tr>
+<td>Chang'e scoring anomaly</td>
+<td>Equal-weighted A-score cannot distinguish schedule-driven
+integration (Apollo) from risk-driven integration (Chang'e); the
+qualitative ordering in the essay captures a difference the formula
+misses</td>
+<td>§VII, §4.3 above</td>
+</tr>
+<tr>
+<td>Disclosure asymmetry</td>
+<td>Chang'e's scores are conditional on available evidence; the
+framework cannot distinguish between high integration and high
+integration <em>as presented</em> within a state-controlled disclosure
+environment</td>
+<td>§IV, §I</td>
+</tr>
+<tr>
+<td>Single-case inference</td>
+<td>Chandrayaan's failure-based learning model is observed in one case
+under specific institutional conditions; it cannot be generalised from a
+single data point</td>
+<td>§V</td>
+</tr>
+<tr>
+<td>Mobility not calibrated</td>
+<td>ΔA estimates are directional (positive/negative/zero) but not
+quantified; the framework cannot compare the magnitude of Apollo's
+post-fire tightening with Chandrayaan's post-Vikram restructuring</td>
+<td>§VII</td>
+</tr>
+<tr>
+<td>Equal-weight assumption</td>
+<td>The aggregation rule weights all five variables equally; no
+empirical basis exists for this choice within the essay</td>
+<td>§3.1 above</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-traceability-index">9. Traceability Index</h2>
+<p>Every formal element in this document maps to an explicit passage in
+the source essay. The index below provides the mapping.</p>
+<table>
+<thead>
+<tr>
+<th>Framework element</th>
+<th>Essay location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable definitions (V1–V6)</td>
+<td>§VII, axis table (lines 141–148)</td>
+</tr>
+<tr>
+<td>Directionality table</td>
+<td>§VII, table column headers ("More Integrated ← / → More
+Exploratory")</td>
+</tr>
+<tr>
+<td>A-score aggregation</td>
+<td>§VII: "Scored qualitatively against the first five criteria" (line
+152)</td>
+</tr>
+<tr>
+<td>Qualitative programme ordering</td>
+<td>§VII, ASCII diagram (lines 154–159)</td>
+</tr>
+<tr>
+<td>Second dimension (B)</td>
+<td>§VII: "A two-dimensional treatment — integration-exploration ×
+centralised-distributed authority" (line 161)</td>
+</tr>
+<tr>
+<td>Artemis quadrant placement</td>
+<td>§VII: "distributed-moderate-integration quadrant" (line 161)</td>
+</tr>
+<tr>
+<td>Mobility concept</td>
+<td>§VII: "The critical insight is not where a programme sits … but
+whether it can <em>move</em>" (line 171)</td>
+</tr>
+<tr>
+<td>Mobility events</td>
+<td>§VII, bullet list (lines 165–169)</td>
+</tr>
+<tr>
+<td>Discriminant condition</td>
+<td>§VII, subsection (lines 173–179)</td>
+</tr>
+<tr>
+<td>Falsification conditions</td>
+<td>§VII: "The prediction would be <em>disconfirmed</em> if…" (line
+177)</td>
+</tr>
+<tr>
+<td>Test cases</td>
+<td>§X, Open Question 5 (line 227)</td>
+</tr>
+<tr>
+<td>Boundary conditions</td>
+<td>§I (lines 45–48), §X Limitations</td>
+</tr>
+<tr>
+<td>Programme-specific scoring</td>
+<td>§II–§VI (individual programme sections)</td>
+</tr>
+<tr>
+<td>Error-correction signatures</td>
+<td>§VIII, signatures table (lines 187–193)</td>
+</tr>
+<tr>
+<td>Known failure modes</td>
+<td>§VII (Artemis misfit), §IV (disclosure), §V (single case), §X
+(limitations)</td>
+</tr>
+</tbody>
+</table>
+      </article>
+
+      <footer class="colophon reveal reveal-delay-2">
+        <img src="wordmark-full.svg" alt="T[h]ree +EC wordmark">
+        <div>
+          <p class="status">Moonshot Dossiers — Council-3 ADM-EC</p>
+          <p class="maxim">A survey marker that knows it is fallible and has encoded how to find truth again.</p>
+          <p class="meta">
+            Auto-generated from Markdown source. Dark moon variant of the T(h)reehouse +EC corporate design.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    const header = document.querySelector(".site-header");
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector("#site-nav");
+    const mobileQuery = window.matchMedia("(max-width: 640px)");
+    let lastScrollY = window.scrollY;
+
+    const syncNavState = () => {
+      const mobile = mobileQuery.matches;
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      if (!mobile) {
+        nav.dataset.open = "true";
+        header.classList.remove("is-hidden");
+        return;
+      }
+      nav.dataset.open = expanded ? "true" : "false";
+      if (expanded) header.classList.remove("is-hidden");
+    };
+
+    toggle.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!expanded));
+      syncNavState();
+    });
+
+    const revealHeader = () => header.classList.remove("is-hidden");
+    nav.addEventListener("focusin", revealHeader);
+    toggle.addEventListener("focus", revealHeader);
+
+    window.addEventListener("scroll", () => {
+      if (!mobileQuery.matches) { lastScrollY = window.scrollY; return; }
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      const currentScrollY = window.scrollY;
+      if (expanded || currentScrollY <= 8 || currentScrollY < lastScrollY) {
+        header.classList.remove("is-hidden");
+      } else if (currentScrollY > lastScrollY + 8) {
+        header.classList.add("is-hidden");
+      }
+      lastScrollY = currentScrollY;
+    }, { passive: true });
+
+    window.addEventListener("resize", syncNavState);
+    syncNavState();
+  </script>
+</body>
+</html>
