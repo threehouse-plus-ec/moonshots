@@ -7,26 +7,11 @@
 **Date:** 2026-04-05  
 **Status:** REVISED — abstract added; front matter restructured  
 
-## Endorsement Marker
-
-Local candidate framework, compiled by the author from primary and secondary sources. This essay interprets the Breakwater dossiers; it does not extend their evidentiary claims.
-
 ---
 
 ## Abstract
 
 Five lunar exploration programmes — Apollo (USA, 1961–72), Luna (USSR, 1958–76; Russia, 2023), Chang'e (China, 2007–present), Chandrayaan (India, 2008–present), and Artemis (USA, 2017–present) — each solved the same engineering problem under uncertainty but adopted fundamentally different error-correction architectures. This essay proposes an integration-exploration axis as a heuristic for comparing those architectures: tight integration (centralised authority, formal configuration control, comprehensive testing) minimises interface failures but suppresses adaptive learning; loose exploration (competing actors, rapid iteration, tolerance for loss) generates information faster but risks incoherence. Apollo and Chang'e cluster at the integrated extreme; Luna at the exploratory extreme; Chandrayaan occupies the middle; Artemis's federated structure does not sit cleanly on the single axis. A governance-horizon hypothesis is offered: programmes under short political horizons are pushed toward the axis extremes, while long-horizon programmes can sustain intermediate positions. The hypothesis is consistent with the five cases but cannot be confirmed by them. A political-societal layer is integrated throughout: each programme's architecture reflects the boundary conditions of its governance environment — Cold War mobilisation, Soviet management-by-rivalry, single-party long-horizon planning, democratic frugality, and post-Shuttle commercial federation. The essay operates at the Sails layer (interpretive, non-binding) and draws on but does not reproduce the Breakwater claim-analysis dossiers published alongside it. Five open questions mark the boundary of the analysis.
-
----
-
-## Structural Rules
-
-- This essay draws on but does not reproduce the Breakwater dossiers.
-- It operates at the Sails layer — interpretive essays offering personal readings of measured evidence, without constitutional or binding status.
-- The dossiers provide the coastline; the essay provides the key. All five dossiers and CL- entries cited below are published at [threehouse-plus-ec.github.io/moonshots](https://threehouse-plus-ec.github.io/moonshots/).
-- All references to ledger entries must cite explicit entry IDs (e.g., CL-APOLLO-008 / CL-2026-010).
-- Cross-dossier comparisons are permitted here but must not alter individual ledger classifications.
-- No derived statistics or summaries may be fed back into Breakwater entries.
 
 ---
 
@@ -215,3 +200,18 @@ That capacity — to hold one's own assumptions open to revision under evidence 
 **4. Artemis regime-shift test.** What constitutes Artemis's first true regime-shift failure — one severe enough to force movement along the axis rather than simplification (see Section VI)? The Gateway cancellation demonstrated capacity for simplification, not for tightening. A Starship HLS test failure, a crew-safety finding, or a partner withdrawal would test a different response mode — does NASA tighten integration authority over partners, or substitute partners while preserving the federated structure?
 
 **5. Governance horizon as predictor.** The governance-horizon hypothesis (see Section VII) predicts that political time-horizons constrain axis position. Future lunar programmes — South Korea, Japan, ESA, or commercial actors with no state governance horizon — offer natural test cases. A commercial programme with no fixed political deadline that nonetheless adopted extreme-integration or extreme-exploration architecture would challenge the hypothesis.
+
+---
+
+## Structural Rules
+
+- This essay draws on but does not reproduce the Breakwater dossiers.
+- It operates at the Sails layer — interpretive essays offering personal readings of measured evidence, without constitutional or binding status.
+- The dossiers provide the coastline; the essay provides the key. All five dossiers and CL- entries cited below are published at [threehouse-plus-ec.github.io/moonshots](https://threehouse-plus-ec.github.io/moonshots/).
+- All references to ledger entries must cite explicit entry IDs (e.g., CL-APOLLO-008 / CL-2026-010).
+- Cross-dossier comparisons are permitted here but must not alter individual ledger classifications.
+- No derived statistics or summaries may be fed back into Breakwater entries.
+
+## Endorsement Marker
+
+Local candidate framework, compiled by the author from primary and secondary sources. This essay interprets the Breakwater dossiers; it does not extend their evidentiary claims.
