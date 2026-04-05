@@ -3,9 +3,9 @@
 **Subtitle:** Error-Correction Architectures in Lunar Exploration  
 **Document:** `essays/two-returns.md`  
 **Epistemic Layer:** Sails  
-**Version:** v1.2.0  
+**Version:** v1.3.0  
 **Date:** 2026-04-05  
-**Status:** REVISED — Open Questions appendix added; SWARM aside tightened  
+**Status:** REVISED — external review integrated; dossier cross-references added  
 
 ## Endorsement Marker
 
@@ -32,8 +32,8 @@ The analytical axis is **integration vs. exploration** — when does tight coupl
 ## Structural Rules
 
 - This essay draws on but does not reproduce the Breakwater dossiers.
-- It operates at the Sails layer: interpretive, personal, non-constitutional.
-- The dossiers provide the coastline; the essay provides the key.
+- It operates at the Sails layer — interpretive essays offering personal readings of measured evidence, without constitutional or binding status.
+- The dossiers provide the coastline; the essay provides the key. All five dossiers and CL- entries cited below are published at [threehouse-plus-ec.github.io/moonshots](https://threehouse-plus-ec.github.io/moonshots/).
 - All references to ledger entries must cite explicit entry IDs (e.g., CL-APOLLO-008 / CL-2026-010).
 - Cross-dossier comparisons are permitted here but must not alter individual ledger classifications.
 - No derived statistics or summaries may be fed back into Breakwater entries.
@@ -44,7 +44,7 @@ The analytical axis is **integration vs. exploration** — when does tight coupl
 
 Between 1958 and 2026, five distinct organisations attempted to land machines or people on the Moon. Each succeeded at least once. Four of the five experienced outright mission failures; the fifth — China's Chang'e programme — holds a perfect 6-for-6 record as of this writing, though its most ambitious phases (crewed landing, ILRS construction) remain ahead. What separates these programmes is not ambition or physics — the Moon is the same distance from Moscow, Houston, Beijing, Bengaluru, and Boca Chica — but the architecture of their error-correction systems. How did each programme detect that something was wrong, and what did it do next?
 
-This is not a rankings exercise. The Breakwater dossiers (Apollo, Artemis, Luna, Chang'e, Chandrayaan) provide the coastline — measured claims, classified against evidence. This essay provides one possible key: the observation that the five programmes represent five distinct answers to the same fundamental problem of engineering under uncertainty.
+This is not a rankings exercise. The Breakwater dossiers (Apollo, Artemis, Luna, Chang'e, Chandrayaan) provide the coastline — measured claims, classified against evidence. This essay provides one possible key: the observation that the five programmes represent five distinct answers to the same fundamental problem of engineering under uncertainty. The cases differ in historiographic maturity: Apollo and Luna draw on sixty years of declassified records; Chang'e and Chandrayaan on under two decades; Artemis on a live programme. Equal-length treatment below is editorial, not epistemic.
 
 The analytical axis is **integration versus exploration**. Tight integration — centralised authority, formal configuration control, comprehensive testing — minimises interface failures and ensures consistency. But it is expensive, slow, and can suppress the adaptive signals that come from accepting partial failure as information. Loose exploration — competitive design bureaux, rapid iteration, tolerance for loss — generates information faster but risks incoherence. Every programme sits somewhere on this axis, and the interesting question is not which position is "best" but what each position's error-correction signature looks like.
 
@@ -112,7 +112,7 @@ The result: Chandrayaan-3 landed successfully at 69.37°S — the southernmost l
 
 This is the most compact error-correction loop in the five programmes: failure → diagnosis → structural redesign → success, completed in four years at minimal cost. The "adaptive iteration" label captures the distinctive feature: ISRO did not fix the specific bug that caused the crash. It redesigned the *category* of vulnerability — moving from success-path to failure-path design, which is a change in error-correction architecture, not just a point fix.
 
-The parallel with Apollo is instructive. NASA's post-Apollo 1 response (CL-APOLLO-010 / CL-2026-012) also involved systemic redesign, not just proximate fixes. Both organisations demonstrated that effective error-correction requires changing the system that produced the error, not just the error itself. The difference is that ISRO did it under extreme resource constraint, suggesting that the essential ingredient is organisational learning capacity, not budget.
+The parallel with Apollo is instructive. NASA's post-Apollo 1 response (CL-APOLLO-010 / CL-2026-012) also involved systemic redesign, not just proximate fixes. Both organisations demonstrated that effective error-correction requires changing the system that produced the error, not just the error itself. The difference is that ISRO did it under extreme resource constraint, suggesting that the essential ingredient is organisational learning capacity, not budget. This is one case under specific conditions; it cannot be generalised from a single data point.
 
 ---
 
@@ -220,8 +220,8 @@ These questions mark where the essay's analysis stops and further evidence would
 
 **2. Chang'e disclosure and the 6/6 record.** Does the phased-validation interpretation (see Section IV) survive scrutiny under a more open disclosure environment, or is the 100% record partly an artefact of state-controlled information? This is not answerable from outside, but indirect indicators — launch cadence anomalies, satellite imagery, insurance market signals — could bound the question.
 
-**3. ISRO institutional fragility.** Can Chandrayaan's failure-based learning culture survive institutional growth, budget increases, and leadership succession (see Section V)? The no-blame mandate was exercised by a specific leadership cohort. If ISRO scales toward crewed spaceflight, the organisational demands change category — and the essay's own analysis notes that the Luna programme's integration capacity died with Korolev.
+**3. ISRO institutional fragility.** Can Chandrayaan's failure-based learning culture survive institutional growth, budget increases, and leadership succession (see Section V)? The no-blame mandate was exercised by a specific leadership cohort. If ISRO scales toward crewed spaceflight, the organisational demands change category — indicators would include team-retention rates across leadership transitions and Gaganyaan's safety-governance model — and the essay's own analysis notes that the Luna programme's integration capacity died with Korolev.
 
-**4. Artemis regime-shift test.** What constitutes Artemis's first true regime-shift failure — one severe enough to force movement along the axis rather than simplification (see Section VI)? The Gateway cancellation demonstrated capacity for simplification, not for tightening. A Starship HLS test failure, a crew-safety finding, or a partner withdrawal would test a different response mode.
+**4. Artemis regime-shift test.** What constitutes Artemis's first true regime-shift failure — one severe enough to force movement along the axis rather than simplification (see Section VI)? The Gateway cancellation demonstrated capacity for simplification, not for tightening. A Starship HLS test failure, a crew-safety finding, or a partner withdrawal would test a different response mode — does NASA tighten integration authority over partners, or substitute partners while preserving the federated structure?
 
 **5. Governance horizon as predictor.** The governance-horizon hypothesis (see Section VII) predicts that political time-horizons constrain axis position. Future lunar programmes — South Korea, Japan, ESA, or commercial actors with no state governance horizon — offer natural test cases. A commercial programme with no fixed political deadline that nonetheless adopted extreme-integration or extreme-exploration architecture would challenge the hypothesis.
