@@ -3,13 +3,13 @@
 **Subtitle:** Error-Correction Architectures in Lunar Exploration  
 **Document:** `essays/two-returns.md`  
 **Epistemic Layer:** Sails  
-**Version:** v1.3.0  
+**Version:** v1.4.0  
 **Date:** 2026-04-05  
-**Status:** REVISED — external review integrated; dossier cross-references added  
+**Status:** REVISED — provenance and access-asymmetry caveats added; Chandrayaan narrative rebalanced  
 
 ## Endorsement Marker
 
-Local candidate framework. This essay interprets the Breakwater dossiers; it does not extend their evidentiary claims.
+Local candidate framework, compiled by the author from primary and secondary sources. This essay interprets the Breakwater dossiers; it does not extend their evidentiary claims.
 
 ---
 
@@ -44,7 +44,7 @@ The analytical axis is **integration vs. exploration** — when does tight coupl
 
 Between 1958 and 2026, five distinct organisations attempted to land machines or people on the Moon. Each succeeded at least once. Four of the five experienced outright mission failures; the fifth — China's Chang'e programme — holds a perfect 6-for-6 record as of this writing, though its most ambitious phases (crewed landing, ILRS construction) remain ahead. What separates these programmes is not ambition or physics — the Moon is the same distance from Moscow, Houston, Beijing, Bengaluru, and Boca Chica — but the architecture of their error-correction systems. How did each programme detect that something was wrong, and what did it do next?
 
-This is not a rankings exercise. The Breakwater dossiers (Apollo, Artemis, Luna, Chang'e, Chandrayaan) provide the coastline — measured claims, classified against evidence. This essay provides one possible key: the observation that the five programmes represent five distinct answers to the same fundamental problem of engineering under uncertainty. The cases differ in historiographic maturity: Apollo and Luna draw on sixty years of declassified records; Chang'e and Chandrayaan on under two decades; Artemis on a live programme. Equal-length treatment below is editorial, not epistemic.
+This is not a rankings exercise. The Breakwater dossiers (Apollo, Artemis, Luna, Chang'e, Chandrayaan) provide the coastline — measured claims, classified against evidence. This essay provides one possible key: the observation that the five programmes represent five distinct answers to the same fundamental problem of engineering under uncertainty. The cases differ in historiographic maturity and archival access: Apollo and Luna draw on sixty years of declassified records; Chang'e operates within a state-controlled disclosure environment; Chandrayaan and Artemis on under two decades of largely contemporaneous reporting. Equal-length treatment below is editorial, not epistemic.
 
 The analytical axis is **integration versus exploration**. Tight integration — centralised authority, formal configuration control, comprehensive testing — minimises interface failures and ensures consistency. But it is expensive, slow, and can suppress the adaptive signals that come from accepting partial failure as information. Loose exploration — competitive design bureaux, rapid iteration, tolerance for loss — generates information faster but risks incoherence. Every programme sits somewhere on this axis, and the interesting question is not which position is "best" but what each position's error-correction signature looks like.
 
@@ -86,7 +86,7 @@ The Luna programme's lesson: exploration-first architectures generate informatio
 
 ## IV. Chang'e: The Phased Validator
 
-China's Chang'e programme is the most methodical of the five. Its four-phase structure — orbit (Chang'e 1–2), land (Chang'e 3–4), sample return (Chang'e 5–6), research station (Chang'e 7–8) — is an architecture for incremental validation (CL-CHANGE-001 / CL-2026-030). Each phase demonstrates a capability that the next phase requires. No phase is attempted before the prior phase succeeds.
+China's Chang'e programme is the most visibly methodical of the five. Its four-phase structure — orbit (Chang'e 1–2), land (Chang'e 3–4), sample return (Chang'e 5–6), research station (Chang'e 7–8) — is an architecture for incremental validation (CL-CHANGE-001 / CL-2026-030). Each phase demonstrates a capability that the next phase requires. No phase is attempted before the prior phase succeeds.
 
 The phased architecture is enabled by single-party long-horizon governance that eliminates election-cycle pressure. State-controlled disclosure shapes the evidentiary landscape: the programme's 6/6 record exists within an environment where zero failures cannot be distinguished from zero *disclosed* failures. This is a structural observation, not a value judgement — but the phased-validation interpretation that follows is conditional on the available evidence, not confirmed by it.
 
@@ -104,9 +104,9 @@ ISRO's Chandrayaan programme provides the clearest case study in failure-based d
 
 Chandrayaan-2's Vikram lander crashed during the fine braking phase at ~2.1 km altitude on 7 September 2019 (CL-CHANDRA-001 / CL-2026-036). The software glitch that caused trajectory deviation was the proximate cause, but the deeper issue was a success-path optimised design: the lander was designed for the case where everything worked, with limited margin for off-nominal performance.
 
-Democratic governance under extreme fiscal constraint defines ISRO's boundary conditions. The budget forces design-for-cost as a first-order constraint, producing the lean iteration cycle — no funding margin for Apollo-style redundancy, so the programme must learn cheaply. The no-blame mandate may reflect a specific institutional culture within ISRO that is not guaranteed to survive leadership changes; this is a fragility worth noting.
+Democratic governance under extreme fiscal constraint defines ISRO's boundary conditions. The budget forces design-for-cost as a first-order constraint, producing the lean iteration cycle — no funding margin for Apollo-style redundancy, so the programme must learn cheaply.
 
-ISRO's response was extraordinary for its deliberateness. The same team was retained — no-blame mandate, no personnel changes (CL-CHANDRA-002 / CL-2026-037). A distinction is warranted: the evidence supports a no-blame *learning* culture — the team was kept together to preserve institutional knowledge — but does not test whether ISRO also sustains accountability for negligence or systemic failures, which is a different question. The design philosophy was inverted: Chandrayaan-3 was designed against failure scenarios, not for the nominal case (CL-CHANDRA-003 / CL-2026-038). The landing zone was expanded from 500m × 500m to 4km × 2.5km. Fuel margin increased by 30%. A Laser Doppler Velocimeter was added specifically to cross-check the navigation system that had failed on Chandrayaan-2. Structural strength was enhanced for higher touchdown loads.
+ISRO's response was extraordinary for its deliberateness. The same team was retained — no-blame mandate, no personnel changes (CL-CHANDRA-002 / CL-2026-037). A distinction is warranted: the evidence supports a no-blame *learning* culture — the team was kept together to preserve institutional knowledge — but does not test whether ISRO also sustains accountability for negligence or systemic failures, which is a different question. The no-blame mandate may reflect a specific institutional culture not guaranteed to survive leadership changes; this is a fragility worth noting. The design philosophy was inverted: Chandrayaan-3 was designed against failure scenarios, not for the nominal case (CL-CHANDRA-003 / CL-2026-038). The landing zone was expanded from 500m × 500m to 4km × 2.5km. Fuel margin increased by 30%. A Laser Doppler Velocimeter was added specifically to cross-check the navigation system that had failed on Chandrayaan-2. Structural strength was enhanced for higher touchdown loads.
 
 The result: Chandrayaan-3 landed successfully at 69.37°S — the southernmost lunar landing ever — for approximately $75 million (CL-CHANDRA-004 / CL-2026-039; CL-CHANDRA-005 / CL-2026-040). The cost is approximately 10% of a comparable NASA mission.
 
@@ -214,7 +214,7 @@ That capacity — to hold one's own assumptions open to revision under evidence 
 
 ## X. Open Questions
 
-These questions mark where the essay's analysis stops and further evidence would be required.
+**Limitations.** This essay is a Sails-layer heuristic, not a tested explanatory framework. Its principal limitations are: (1) five cases cannot establish a general rule; (2) the integration-exploration axis is qualitative and has not been scored or calibrated; (3) archival access varies sharply across the five programmes (see Section I); (4) the Breakwater dossiers are the author's own curation, not independently peer-reviewed evidence. The open questions below arise from these limits.
 
 **1. Inter-programme intelligence as error-correction input.** To what extent did US intelligence on Soviet capabilities function as an error-correction input for Apollo's schedule and risk decisions (see Section II)? If NASA knew by 1967 that the N1 was in serious trouble, the competitive pressure justifying sprint integration was partly informed by covert knowledge. How should the framework account for inter-programme knowledge transfer — overt and covert — as a distinct error-correction channel? Declassified intelligence assessments cross-referenced with Apollo programme decisions would bear on this.
 
