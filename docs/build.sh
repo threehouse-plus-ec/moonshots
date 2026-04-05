@@ -83,6 +83,7 @@ convert_md() {
       pandoc \
         --from=gfm \
         --to=html5 \
+        --shift-heading-level-by=1 \
         $HIGHLIGHT_FLAG \
         "$appendix" >> "$tmp_html"
     done
