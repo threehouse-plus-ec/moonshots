@@ -1,15 +1,15 @@
 # Error-Correction Architecture Framework — Lunar Exploration Programmes
 
 **Document:** `frameworks/error-correction-lunar.md`  
-**Epistemic Layer:** Coastline candidate  
-**Version:** v1.0.0  
+**Epistemic Layer:** Handbook  
+**Version:** v1.0.1  
 **Date:** 2026-04-05  
 **Source:** `essays/two-returns.md` v1.4.0  
-**Status:** EXTRACTED — formalisation of essay constructs; no new claims  
+**Status:** EXTRACTED — operational handbook; no new claims. Coastline promotion pending external validation.  
 
 ## Endorsement Marker
 
-Local candidate framework, compiled by the author from primary and secondary sources. This document formalises constructs already present in the companion essay "Five Paths to the Moon." It introduces no new claims, evidence, or programmes. All formal elements trace to explicit passages in the source essay.
+Operational handbook for applying the constructs of "Five Paths to the Moon." Compiled by the author from primary and secondary sources. Promotion to Coastline candidate requires successful application to at least one programme not in the original dataset. This document introduces no new claims, evidence, or programmes. All formal elements trace to explicit passages in the source essay.
 
 ---
 
@@ -92,6 +92,8 @@ Lower B-scores indicate centralised authority; higher B-scores indicate distribu
 
 **Justification:** The essay states that Artemis "does not sit cleanly on this single axis" and proposes the two-dimensional treatment as a resolution (§VII). Variables V1 and V5 are the two dimensions the essay identifies as placing Artemis differently from the primary axis.
 
+**Limitation:** V5 appears in both the A-score and the B-score. The two dimensions are therefore not fully independent; programmes with high external dependency will score as more exploratory on A and more distributed on B simultaneously. A fully orthogonal second dimension would require a variable not shared with A.
+
 ---
 
 ## 4. Programme Scoring Table
@@ -110,17 +112,7 @@ All scores are assigned using only essay-supported evidence. Ordinal bins: low (
 
 ### 4.2 A-Score Calculation
 
-| Programme | V1_i | V2_i | V3_i | V4_e | V5_e | A-score | Position |
-|---|---|---|---|---|---|---|---|
-| **Apollo** | 3 | 3 | 3 | 1 | 1 | **2.2** | Most integrated |
-| **Chang'e** | 3 | 3 | 3 | 1 | 1 | **2.2** | Most integrated (tied) |
-| **Chandrayaan** | 2 | 2 | 2 | 2 | 1 | **1.8** | Middle |
-| **Luna** | 1 | 1 | 1 | 3 | 1 | **1.4** | Exploratory |
-| **Artemis** | 2 | 2 | 1 | 2 | 3 | **2.0** | Mixed |
-
-**Note on scoring direction:** V4 and V5 are scored on the exploration scale (high tolerance / high dependency = 3), while V1–V3 are scored on the integration scale (high authority / control / conservatism = 3). To compute A as a unified integration score, V4_e and V5_e are inverted: V4_e = 4 − V4_exploration, V5_e = 4 − V5_exploration.
-
-Corrected calculation:
+V4 and V5 are inverted before aggregation: V4_i = 4 − V4_exploration, V5_i = 4 − V5_exploration. This aligns all five variables on the integration scale (higher = more integrated).
 
 | Programme | V1_i | V2_i | V3_i | V4_i (inverted) | V5_i (inverted) | A-score | Position |
 |---|---|---|---|---|---|---|---|
@@ -262,6 +254,8 @@ If V6 = long  → A tends toward intermediate values (1.6 ≤ A ≤ 2.6)
 Chang'e scores 3.0 (maximally integrated) on the A-score, placing it at the extreme — which is *inconsistent* with the governance-horizon prediction. However, the essay places Chang'e in the middle of its qualitative ordering, between Apollo and Chandrayaan (§VII). This discrepancy arises because the equal-weighted scoring formula cannot distinguish between Apollo's integration (driven by schedule pressure) and Chang'e's integration (driven by risk minimisation under long horizons). The essay's qualitative ordering captures a difference — Chang'e's integration is *patient* rather than *urgent* — that the current variable set does not measure.
 
 This is a known limitation of the framework's resolution. A seventh variable — **integration urgency** (schedule-driven vs. risk-driven) — would resolve it but is not explicitly defined in the essay and therefore cannot be introduced here. The anomaly is flagged for future work.
+
+The governance-horizon hypothesis therefore has one inconsistent case out of four testable cases (Artemis excluded). The hypothesis is not merely untested against new data — it is already under strain from within its own dataset. This does not invalidate the heuristic but limits the confidence with which it can be proposed as a candidate prediction.
 
 ### 6.4 Falsification Conditions
 
