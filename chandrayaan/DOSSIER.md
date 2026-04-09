@@ -36,6 +36,35 @@ Local candidate framework. This dossier measures claims; it does not endorse the
 
 ---
 
+## Visual References & Further Reading
+
+### Programme Images
+
+![Chandrayaan-3 Vikram lander's first image of the lunar south polar surface, August 2023](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/First_image_of_the_lunar_surface_from_Chandrayaan-3.jpg/480px-First_image_of_the_lunar_surface_from_Chandrayaan-3.jpg)
+
+*First image from Chandrayaan-3's Vikram lander after soft landing at 69.37°S. 23 August 2023. India became the fourth country to soft-land on the Moon and the first to reach the south polar region. (ISRO)*
+
+### In-Depth Resources
+
+| Topic | Link | Description |
+|-------|------|-------------|
+| Chandrayaan-3 | [Wikipedia: Chandrayaan-3](https://en.wikipedia.org/wiki/Chandrayaan-3) | Mission profile, failure-based design philosophy, south polar landing |
+| Chandrayaan-2 | [Wikipedia: Chandrayaan-2](https://en.wikipedia.org/wiki/Chandrayaan-2) | Vikram lander failure, orbiter (still operational), and lessons learned |
+| Chandrayaan-1 | [Wikipedia: Chandrayaan-1](https://en.wikipedia.org/wiki/Chandrayaan-1) | First Indian lunar mission — Moon Impact Probe and water ice discovery |
+| ISRO | [Wikipedia: ISRO](https://en.wikipedia.org/wiki/Indian_Space_Research_Organisation) | Organisation history, cost-constrained engineering culture |
+| Pragyan rover | [Wikipedia: Pragyan (rover)](https://en.wikipedia.org/wiki/Pragyan_(rover)) | Surface rover — instruments, mobility, and 14-day operations |
+| LVM3 launch vehicle | [Wikipedia: LVM3](https://en.wikipedia.org/wiki/LVM3) | Indigenous launch vehicle used for all Chandrayaan missions |
+| Chandrayaan images | [Wikimedia Commons: Chandrayaan](https://commons.wikimedia.org/wiki/Category:Chandrayaan_programme) | Programme photography and mission imagery |
+
+### Cross-Programme Links
+
+- [Apollo Dossier](../apollo/DOSSIER.md) — Cost comparison: entire Chandrayaan programme (~$273M) vs Apollo (~$257B) in CL-CHANDRA-005
+- [Artemis Dossier](../artemis/DOSSIER.md) — Schedule and cost contrast; single Artemis I mission cost (~$4.1B) exceeds total Chandrayaan programme
+- [Luna Dossier](../luna/DOSSIER.md) — Luna 25 attempted south polar landing and crashed 4 days before Chandrayaan-3 succeeded (CL-CHANDRA-004)
+- [Chang'e Dossier](../change/DOSSIER.md) — Chang'e 4 far-side landing (2019) and Chandrayaan-3 south polar landing (2023) both expanded lunar geographic envelope
+
+---
+
 ## Entry Index
 
 | Entry ID | Global ID | Short Title | Type | Classification | Status |

@@ -42,6 +42,36 @@ All Type P (programme-state) entries carry:
 
 ---
 
+## Visual References & Further Reading
+
+### Programme Images
+
+![Artemis I Space Launch System lifts off from Launch Complex 39B, November 2022](https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Artemis_1_Launch_%28NHQ202211160029%29.jpg/480px-Artemis_1_Launch_%28NHQ202211160029%29.jpg)
+
+*Artemis I lifts off from LC-39B, Kennedy Space Center. 16 November 2022. The most powerful rocket flown since Saturn V. (NASA/Bill Ingalls)*
+
+### In-Depth Resources
+
+| Topic | Link | Description |
+|-------|------|-------------|
+| Artemis programme overview | [Wikipedia: Artemis program](https://en.wikipedia.org/wiki/Artemis_program) | Programme history, mission manifest, and international partnerships |
+| Space Launch System | [Wikipedia: Space Launch System](https://en.wikipedia.org/wiki/Space_Launch_System) | SLS architecture, Block variants, and performance specifications |
+| Orion spacecraft | [Wikipedia: Orion (spacecraft)](https://en.wikipedia.org/wiki/Orion_(spacecraft)) | Crew vehicle design, ESA service module, and heat shield |
+| Artemis I | [Wikipedia: Artemis I](https://en.wikipedia.org/wiki/Artemis_1) | Uncrewed test flight — DRO, heat shield anomaly, 25.5-day mission |
+| Artemis II | [Wikipedia: Artemis II](https://en.wikipedia.org/wiki/Artemis_2) | First crewed Artemis mission — crew, profile, and objectives |
+| SpaceX Starship HLS | [Wikipedia: SpaceX Starship](https://en.wikipedia.org/wiki/SpaceX_Starship) | Human Landing System variant, orbital refuelling architecture |
+| Lunar Gateway | [Wikipedia: Lunar Gateway](https://en.wikipedia.org/wiki/Lunar_Gateway) | Cancelled cislunar station — history and architectural role |
+| Artemis programme images | [Wikimedia Commons: Artemis program](https://commons.wikimedia.org/wiki/Category:Artemis_program) | Programme photography archive |
+
+### Cross-Programme Links
+
+- [Apollo Dossier](../apollo/DOSSIER.md) — Predecessor programme; Saturn V comparison (CL-ARTEMIS-002), schedule contrast (CL-ARTEMIS-004)
+- [Chang'e Dossier](../change/DOSSIER.md) — Competing sustained-presence initiative (CL-ARTEMIS-001 vs CL-CHANGE-005)
+- [Luna Dossier](../luna/DOSSIER.md) — Historical Soviet architecture; organisational contrast
+- [Chandrayaan Dossier](../chandrayaan/DOSSIER.md) — Cost and design philosophy contrast (CL-CHANDRA-005)
+
+---
+
 ## Entry Index
 
 | Entry ID | Global ID | Short Title | Type | Classification | Status |

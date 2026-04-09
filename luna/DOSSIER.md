@@ -37,6 +37,37 @@ Local candidate framework. This dossier measures claims; it does not endorse the
 
 ---
 
+## Visual References & Further Reading
+
+### Programme Images
+
+![Luna 9 spacecraft model — first spacecraft to achieve a soft landing on the Moon, February 1966](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Luna-9_model.jpg/480px-Luna-9_model.jpg)
+
+*Luna 9 — first spacecraft to achieve a soft landing on another celestial body. 3 February 1966. The egg-shaped capsule transmitted the first panoramic images from the lunar surface. (Wikimedia Commons)*
+
+### In-Depth Resources
+
+| Topic | Link | Description |
+|-------|------|-------------|
+| Luna programme | [Wikipedia: Luna programme](https://en.wikipedia.org/wiki/Luna_programme) | Full mission history from Luna 1 (1959) through Luna 24 (1976) and Luna 25 (2023) |
+| Luna 9 | [Wikipedia: Luna 9](https://en.wikipedia.org/wiki/Luna_9) | First soft landing on the Moon — 3 February 1966 |
+| Luna 16 | [Wikipedia: Luna 16](https://en.wikipedia.org/wiki/Luna_16) | First robotic sample return — 101 g from Mare Fecunditatis (1970) |
+| Luna 24 | [Wikipedia: Luna 24](https://en.wikipedia.org/wiki/Luna_24) | Last Soviet lunar mission (1976); 170 g deep core sample return |
+| Luna 25 | [Wikipedia: Luna 25](https://en.wikipedia.org/wiki/Luna_25) | 2023 revival mission — south polar attempt, crash, and systemic implications |
+| N1 rocket | [Wikipedia: N1 (rocket)](https://en.wikipedia.org/wiki/N1_(rocket)) | Soviet lunar rocket — 30-engine first stage, four consecutive failures |
+| Sergei Korolev | [Wikipedia: Sergei Korolev](https://en.wikipedia.org/wiki/Sergei_Korolev) | Chief Designer of the Soviet space programme; death in 1966 fragmented leadership |
+| Lunokhod rovers | [Wikipedia: Lunokhod programme](https://en.wikipedia.org/wiki/Lunokhod_programme) | First robotic rovers on another celestial body (1970, 1973) |
+| Luna programme images | [Wikimedia Commons: Luna programme](https://commons.wikimedia.org/wiki/Category:Luna_programme) | Historical spacecraft photography and surface images |
+
+### Cross-Programme Links
+
+- [Apollo Dossier](../apollo/DOSSIER.md) — Primary competing architecture; bureau fragmentation (CL-LUNA-001) vs five-box management (CL-APOLLO-005)
+- [Artemis Dossier](../artemis/DOSSIER.md) — Organisational lessons; Luna programme's opacity contrasted with Artemis transparency
+- [Chandrayaan Dossier](../chandrayaan/DOSSIER.md) — Luna 25 crash (CL-LUNA-004) four days before Chandrayaan-3's successful south polar landing
+- [Chang'e Dossier](../change/DOSSIER.md) — Chang'e 5 ended the 44-year gap since Luna 24's last sample return
+
+---
+
 ## Entry Index
 
 | Entry ID | Global ID | Short Title | Type | Classification | Status |

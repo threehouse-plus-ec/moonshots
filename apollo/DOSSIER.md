@@ -34,6 +34,41 @@ Local candidate framework. This dossier measures claims; it does not endorse the
 
 ---
 
+## Visual References & Further Reading
+
+### Programme Images
+
+![Buzz Aldrin on the lunar surface during Apollo 11, July 1969](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Aldrin_Apollo_11_original.jpg/480px-Aldrin_Apollo_11_original.jpg)
+
+*Buzz Aldrin on the lunar surface, photographed by Neil Armstrong. Apollo 11, 20 July 1969. (NASA AS11-40-5903)*
+
+![Earthrise as seen from Apollo 8, December 1968](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/NASA-Apollo8-Dec24-Earthrise.jpg/480px-NASA-Apollo8-Dec24-Earthrise.jpg)
+
+*Earthrise — Earth rising above the lunar horizon, photographed by William Anders from Apollo 8. 24 December 1968. (NASA AS08-14-2383)*
+
+### In-Depth Resources
+
+| Topic | Link | Description |
+|-------|------|-------------|
+| Apollo programme overview | [Wikipedia: Apollo program](https://en.wikipedia.org/wiki/Apollo_program) | Comprehensive overview of programme history, missions, and legacy |
+| Apollo 11 | [Wikipedia: Apollo 11](https://en.wikipedia.org/wiki/Apollo_11) | First crewed lunar landing — mission profile, timeline, and crew |
+| Saturn V | [Wikipedia: Saturn V](https://en.wikipedia.org/wiki/Saturn_V) | Launch vehicle architecture, staging, and performance data |
+| Apollo Lunar Module | [Wikipedia: Apollo Lunar Module](https://en.wikipedia.org/wiki/Apollo_Lunar_Module) | Grumman-built lander — design, variants, and mission history |
+| Apollo Guidance Computer | [Wikipedia: Apollo Guidance Computer](https://en.wikipedia.org/wiki/Apollo_Guidance_Computer) | MIT IL pioneering computer — hardware, software, and the 1202 alarm |
+| Apollo 1 | [Wikipedia: Apollo 1](https://en.wikipedia.org/wiki/Apollo_1) | The fire, the review board investigation, and the Block II redesign |
+| Apollo 13 | [Wikipedia: Apollo 13](https://en.wikipedia.org/wiki/Apollo_13) | The cascading failure, improvised CO₂ scrubber, and safe return |
+| Lunar samples | [Wikipedia: Moon rock](https://en.wikipedia.org/wiki/Moon_rock) | 382 kg returned across six missions; ongoing scientific analysis |
+| Apollo programme images | [Wikimedia Commons: Apollo program](https://commons.wikimedia.org/wiki/Category:Apollo_program) | Full image archive of programme photography |
+
+### Cross-Programme Links
+
+- [Artemis Dossier](../artemis/DOSSIER.md) — NASA's successor programme; SLS vs Saturn V (CL-ARTEMIS-002), schedule comparison (CL-ARTEMIS-004)
+- [Luna Dossier](../luna/DOSSIER.md) — Soviet competing architecture; referenced in CL-APOLLO-006 (LOR vs alternatives)
+- [Chandrayaan Dossier](../chandrayaan/DOSSIER.md) — ISRO programme; cost comparison in CL-CHANDRA-005 ($273M vs $257B)
+- [Chang'e Dossier](../change/DOSSIER.md) — Chinese programme; incremental approach contrasted in CL-CHANGE-004
+
+---
+
 ## Entry Index
 
 ### Batch 1 — Programme-Level Claims

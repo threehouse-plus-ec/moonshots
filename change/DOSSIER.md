@@ -43,6 +43,36 @@ All Type P (programme-state) entries carry:
 
 ---
 
+## Visual References & Further Reading
+
+### Programme Images
+
+![The far side of the Moon and Earth, photographed by Chang'e 5-T1, October 2014](https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/The_Earth_and_the_Moon_photographed_from_Chang%27e_5-T1.jpg/480px-The_Earth_and_the_Moon_photographed_from_Chang%27e_5-T1.jpg)
+
+*The far side of the Moon with Earth in the background, photographed by Chang'e 5-T1 during its lunar return test flight. 28 October 2014. (CNSA)*
+
+### In-Depth Resources
+
+| Topic | Link | Description |
+|-------|------|-------------|
+| Chinese Lunar Exploration Program | [Wikipedia: Chinese Lunar Exploration Program](https://en.wikipedia.org/wiki/Chinese_Lunar_Exploration_Program) | Four-phase architecture, mission history, and ILRS plans |
+| Chang'e 3 | [Wikipedia: Chang'e 3](https://en.wikipedia.org/wiki/Chang%27e_3) | First Chinese soft landing; Yutu rover on Mare Imbrium |
+| Chang'e 4 | [Wikipedia: Chang'e 4](https://en.wikipedia.org/wiki/Chang%27e_4) | First-ever far-side soft landing; Queqiao relay satellite |
+| Chang'e 5 | [Wikipedia: Chang'e 5](https://en.wikipedia.org/wiki/Chang%27e_5) | First lunar sample return since Luna 24 (1976); 1,731 g returned |
+| Chang'e 6 | [Wikipedia: Chang'e 6](https://en.wikipedia.org/wiki/Chang%27e_6) | First far-side sample return; 1,935.3 g from Apollo basin |
+| Queqiao relay satellite | [Wikipedia: Queqiao](https://en.wikipedia.org/wiki/Queqiao) | Earth–Moon L2 relay enabling far-side communications |
+| ILRS programme | [Wikipedia: International Lunar Research Station](https://en.wikipedia.org/wiki/International_Lunar_Research_Station) | China-led alternative to Artemis for sustained lunar presence |
+| Chang'e programme images | [Wikimedia Commons: Chinese Lunar Exploration Program](https://commons.wikimedia.org/wiki/Category:Chinese_Lunar_Exploration_Program) | Programme photography and surface imagery |
+
+### Cross-Programme Links
+
+- [Apollo Dossier](../apollo/DOSSIER.md) — Incremental vs all-up approaches; Chang'e's phased architecture vs Apollo's compressed timeline
+- [Artemis Dossier](../artemis/DOSSIER.md) — ILRS as competing sustained-presence architecture (CL-CHANGE-005 vs CL-ARTEMIS-001)
+- [Chandrayaan Dossier](../chandrayaan/DOSSIER.md) — Chang'e 4 far-side landing and Chandrayaan-3 south polar landing as complementary "first in region" achievements
+- [Luna Dossier](../luna/DOSSIER.md) — Chang'e 5 was the first sample return since Soviet Luna 24 (1976), closing a 44-year gap
+
+---
+
 ## Entry Index
 
 | Entry ID | Global ID | Short Title | Type | Classification | Status |
