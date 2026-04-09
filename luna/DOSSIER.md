@@ -41,7 +41,7 @@ Local candidate framework. This dossier measures claims; it does not endorse the
 
 ### Programme Images
 
-![Luna 9 spacecraft model — first spacecraft to achieve a soft landing on the Moon, February 1966](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Luna-9_model.jpg/480px-Luna-9_model.jpg)
+![Luna 9 spacecraft model — first spacecraft to achieve a soft landing on the Moon, February 1966](https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Luna-9_model.jpg/480px-Luna-9_model.jpg)
 
 *Luna 9 — first spacecraft to achieve a soft landing on another celestial body. 3 February 1966. The egg-shaped capsule transmitted the first panoramic images from the lunar surface. (Wikimedia Commons)*
 

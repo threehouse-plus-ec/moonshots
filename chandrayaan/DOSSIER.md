@@ -40,7 +40,7 @@ Local candidate framework. This dossier measures claims; it does not endorse the
 
 ### Programme Images
 
-![Chandrayaan-3 Vikram lander's first image of the lunar south polar surface, August 2023](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/First_image_of_the_lunar_surface_from_Chandrayaan-3.jpg/480px-First_image_of_the_lunar_surface_from_Chandrayaan-3.jpg)
+![Chandrayaan-3 Vikram lander's first image of the lunar south polar surface, August 2023](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/First_image_of_the_lunar_surface_from_Chandrayaan-3.jpg/480px-First_image_of_the_lunar_surface_from_Chandrayaan-3.jpg)
 
 *First image from Chandrayaan-3's Vikram lander after soft landing at 69.37°S. 23 August 2023. India became the fourth country to soft-land on the Moon and the first to reach the south polar region. (ISRO)*
 

@@ -46,7 +46,7 @@ All Type P (programme-state) entries carry:
 
 ### Programme Images
 
-![Artemis I Space Launch System lifts off from Launch Complex 39B, November 2022](https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Artemis_1_Launch_%28NHQ202211160029%29.jpg/480px-Artemis_1_Launch_%28NHQ202211160029%29.jpg)
+![Artemis I Space Launch System lifts off from Launch Complex 39B, November 2022](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Artemis_1_Launch_%28NHQ202211160029%29.jpg/480px-Artemis_1_Launch_%28NHQ202211160029%29.jpg)
 
 *Artemis I lifts off from LC-39B, Kennedy Space Center. 16 November 2022. The most powerful rocket flown since Saturn V. (NASA/Bill Ingalls)*
 
