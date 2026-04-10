@@ -47,7 +47,7 @@ All Type P (programme-state) entries carry:
 
 ### Programme Images
 
-![The far side of the Moon and Earth, photographed by Chang'e 5-T1, October 2014](https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/The_Earth_and_the_Moon_photographed_from_Chang%27e_5-T1.jpg/480px-The_Earth_and_the_Moon_photographed_from_Chang%27e_5-T1.jpg)
+**[The far side of the Moon and Earth, photographed by Chang'e 5-T1, October 2014 — view on Wikipedia](https://en.wikipedia.org/wiki/Chang%27e_5-T1)**
 
 *The far side of the Moon with Earth in the background, photographed by Chang'e 5-T1 during its lunar return test flight. 28 October 2014. (CNSA)*
 

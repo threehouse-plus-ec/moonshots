@@ -38,11 +38,11 @@ Local candidate framework. This dossier measures claims; it does not endorse the
 
 ### Programme Images
 
-![Buzz Aldrin on the lunar surface during Apollo 11, July 1969](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Buzz_Aldrin_by_Neil_Armstrong.jpg/480px-Buzz_Aldrin_by_Neil_Armstrong.jpg)
+**[Buzz Aldrin on the lunar surface during Apollo 11 — view on Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Buzz_Aldrin_by_Neil_Armstrong.jpg)**
 
 *Buzz Aldrin on the lunar surface, photographed by Neil Armstrong. Apollo 11, 20 July 1969. (NASA AS11-40-5903)*
 
-![Earthrise as seen from Apollo 8, December 1968](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/NASA-Apollo8-Dec24-Earthrise.jpg/480px-NASA-Apollo8-Dec24-Earthrise.jpg)
+**[Earthrise as seen from Apollo 8, December 1968 — view on Wikipedia](https://en.wikipedia.org/wiki/Earthrise)**
 
 *Earthrise — Earth rising above the lunar horizon, photographed by William Anders from Apollo 8. 24 December 1968. (NASA AS08-14-2383)*
 
