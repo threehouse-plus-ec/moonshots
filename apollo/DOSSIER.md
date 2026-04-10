@@ -38,7 +38,7 @@ Local candidate framework. This dossier measures claims; it does not endorse the
 
 ### Programme Images
 
-![Buzz Aldrin on the lunar surface during Apollo 11, July 1969](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Aldrin_Apollo_11_original.jpg/480px-Aldrin_Apollo_11_original.jpg)
+![Buzz Aldrin on the lunar surface during Apollo 11, July 1969](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Buzz_Aldrin_by_Neil_Armstrong.jpg/480px-Buzz_Aldrin_by_Neil_Armstrong.jpg)
 
 *Buzz Aldrin on the lunar surface, photographed by Neil Armstrong. Apollo 11, 20 July 1969. (NASA AS11-40-5903)*
 
