@@ -112,6 +112,13 @@ convert_md \
   "2017–present · 6+ entries · Open system" \
   "$DOCS_DIR/artemis.html"
 
+convert_md \
+  "$REPO_ROOT/artemis/review/artemis-program-review.md" \
+  "Artemis II — Review Article" \
+  "Companion Review · Breakwater" \
+  "Rev 5 · 11 April 2026 · Post-splashdown" \
+  "$DOCS_DIR/artemis-review.html"
+
 # --- Comparative dossiers ---
 
 convert_md \
