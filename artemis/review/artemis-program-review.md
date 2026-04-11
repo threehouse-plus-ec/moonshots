@@ -295,15 +295,14 @@ But on 10 April 2026, four people came back from the Moon. That is not nothing. 
 | **Mission length** | About 10 days |
 | **Farthest distance from Earth** | ~252,760 miles (406,773 km) — a new human record |
 | **Closest approach to Moon** | ~4,070 miles (6,550 km) |
-| **Total distance travelled** | ~695,000 miles |
-| **Reentry speed** | ~25,000 mph (40,000 km/h) |
+| **Total distance travelled** | 700,237 miles (measured); ~695,000 miles projected pre-flight |
+| **Reentry speed** | 24,664 mph (~39,700 km/h) measured at atmospheric entry; ~25,000 mph projected pre-flight |
 | **Peak exterior temperature** | Over 5,000 °F (2,760 °C) |
 | **Cost per launch** | ~$4.1 billion (government estimate) |
 | **Total programme cost (2012–2025)** | ~$93 billion |
 | **Splashdown** | 10 April 2026, 8:07 p.m. ET, Pacific Ocean off San Diego (confirmed) |
-| **Total distance flown (final)** | 700,237 miles |
-| **Peak entry velocity (measured)** | 24,664 mph |
 | **Landing accuracy** | Within less than one mile of planned point |
+| **Flight-path angle accuracy** | Within 0.4 per cent of target |
 
 ---
 
