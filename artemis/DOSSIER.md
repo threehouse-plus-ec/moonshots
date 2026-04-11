@@ -46,7 +46,7 @@ All Type P (programme-state) entries carry:
 
 ### Companion Review Article
 
-**[Return to the Moon: NASA's Artemis Program and Its First Crewed Flight](../docs/artemis-review.html)** ([source markdown](review/artemis-program-review.md)) — Long-form review article covering the scope, technical details, costs, and open questions of Artemis, with a dedicated post-splashdown update on the Artemis II reentry (Rev 5, 11 April 2026) and a new section on the redesigned Artemis III heat shield. Companion piece to this dossier; narrative format, broad audience.
+**[Return to the Moon: NASA's Artemis Program and Its First Crewed Flight](artemis-review.html)** ([source markdown](review/artemis-program-review.md)) — Long-form review article covering the scope, technical details, costs, and open questions of Artemis, with a dedicated post-splashdown update on the Artemis II reentry (Rev 5, 11 April 2026) and a new section on the redesigned Artemis III heat shield. Companion piece to this dossier; narrative format, broad audience.
 
 ### Programme Images
 
